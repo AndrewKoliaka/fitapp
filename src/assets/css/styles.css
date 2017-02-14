@@ -1,5 +1,4 @@
 #counter_app {
-  position: relative;
   height: 900px;
   background-color: white;
   font-family: Roboto, sans-serif;
@@ -131,7 +130,6 @@ footer {
   text-align: center;
   height: 440px;
   color: white;
-  position: relative;
 }
 footer h2 {
   margin-top: 115px;
@@ -206,8 +204,8 @@ footer .footer_banana {
   background-repeat: no-repeat;
   -webkit-filter: blur(4px);
           filter: blur(4px);
-  right: 50px;
-  bottom: 200px;
+  right: 0;
+  top: 50px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -222,7 +220,7 @@ footer .footer_apple {
   -webkit-filter: blur(4px);
           filter: blur(4px);
   right: 0;
-  bottom: 0px;
+  bottom: 0;
 }
 header {
   height: 900px;
@@ -230,7 +228,6 @@ header {
   background-color: #2ecc71;
   font-family: Roboto, sans-serif;
   font-weight: 300;
-  position: relative;
 }
 header .site-nav {
   font-size: 1.125em;
@@ -289,8 +286,8 @@ header .site-header #header_phone {
   background-size: 100%;
   background-position: top left;
   background-repeat: no-repeat;
-  right: 50px;
   bottom: 0;
+  right: 20px;
   z-index: 9999;
 }
 .banana_header {
@@ -301,8 +298,8 @@ header .site-header #header_phone {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  left: 450px;
-  top: 92px;
+  left: 300px;
+  top: 120px;
   -webkit-filter: blur(4px);
           filter: blur(4px);
   -webkit-transform: rotate(30deg);
@@ -317,7 +314,7 @@ header .site-header #header_phone {
   background-position: center;
   background-repeat: no-repeat;
   top: 120px;
-  left: 950px;
+  left: 900px;
   z-index: 1;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -332,8 +329,8 @@ header .site-header #header_phone {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  top: 235px;
-  left: -120px;
+  top: 230px;
+  left: -170px;
   -webkit-filter: blur(4px);
           filter: blur(4px);
   -webkit-transform: rotate(45deg);
@@ -348,7 +345,7 @@ header .site-header #header_phone {
   background-position: top left;
   background-repeat: no-repeat;
   top: 626px;
-  left: 1115px;
+  left: 1060px;
   z-index: 1;
   -webkit-filter: blur(4px);
           filter: blur(4px);
@@ -370,7 +367,6 @@ header .site-header #header_phone {
           filter: blur(4px);
 }
 #manage_time {
-  position: relative;
   background-color: white;
   height: 700px;
 }
@@ -486,7 +482,6 @@ header .site-header #header_phone {
 }
 #plan_diet {
   text-align: center;
-  position: relative;
   height: 900px;
   background-color: #f9f9f9;
 }
@@ -502,7 +497,7 @@ header .site-header #header_phone {
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
-  left: 275px;
+  left: 190px;
   bottom: 0;
   z-index: 9;
 }
@@ -522,7 +517,7 @@ header .site-header #header_phone {
   z-index: 10;
 }
 #plan_diet #right_phone {
-  right: 275px;
+  right: 190px;
   bottom: 0;
   z-index: 9;
   position: absolute;
@@ -546,7 +541,7 @@ header .site-header #header_phone {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   left: -50px;
-  top: 400px;
+  top: 300px;
 }
 #plan_diet .diet_strawberry {
   position: absolute;
@@ -560,8 +555,8 @@ header .site-header #header_phone {
           filter: blur(4px);
   -webkit-transform: rotate(80deg);
           transform: rotate(80deg);
-  top: 450px;
-  right: 100px;
+  top: 370px;
+  right: 10px;
 }
 #plan_diet .diet_apple {
   position: absolute;
@@ -575,23 +570,23 @@ header .site-header #header_phone {
           filter: blur(4px);
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
-  left: 120px;
+  left: 30px;
   top: 600px;
 }
 #plan_diet .diet_banana {
   position: absolute;
   background-image: url('../images/banana-dreams-02.png');
   width: 227px;
-  height: 361px;
+  height: 150px;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-filter: blur(4px);
           filter: blur(4px);
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  top: 550px;
-  right: 130px;
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+  top: 650px;
+  right: 40px;
 }
 @font-face {
   font-family: 'Roboto';
@@ -660,7 +655,6 @@ header .site-header #header_phone {
 }
 body {
   font-family: Roboto, sans-serif;
-  position: relative;
   padding: 0;
   margin: 0;
   font-size: 16px;
@@ -683,6 +677,10 @@ h2 {
   font-weight: 300;
   font-size: 3em;
   line-height: 1;
+}
+.container {
+  position: relative;
+  height: inherit;
 }
 .not_clear {
   -webkit-filter: blur(4px);

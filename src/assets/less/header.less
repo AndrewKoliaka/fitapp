@@ -4,7 +4,6 @@ header {
     background-color: @accent;
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    position: relative;
     .site-nav {
         font-size: 1.125em;
         padding-top: 20px;
@@ -46,8 +45,8 @@ header {
         }
         #header_phone {
             .bg_image('../images/header_phone.png', 404px, 640px, top left);
-            right: 50px;
             bottom: 0;
+            right: 20px;
             z-index: 9999;
         }
     }
@@ -55,8 +54,8 @@ header {
 
 .banana_header {
     .bg_image('../images/banana-dreams-02.png', 234px, 192px);
-    left: 450px;
-    top: 92px;
+    left: 300px;
+    top: 120px;
     .not_clear();
     transform: rotate(30deg);
 }
@@ -64,7 +63,7 @@ header {
 .tomato_header {
     .bg_image('../images/tamato.png', @width: 250px, @height: 253px);
     top: 120px;
-    left: 950px;
+    left: 900px;
     z-index: 1;
     transform: rotate(45deg);
     .not_clear();
@@ -72,8 +71,8 @@ header {
 
 .apple_header {
     .bg_image('../images/apple1.png', 176px, 426px);
-    top: 235px;
-    left: -120px;
+    top: 230px;
+    left: -170px;
     .not_clear();
     transform: rotate(45deg);
 }
@@ -81,7 +80,7 @@ header {
 .strawberry1_header {
     .bg_image('../images/strawberries-transparent-1147x1280.png', 121px, 135px, top left);
     top: 626px;
-    left: 1115px;
+    left: 1060px;
     z-index: 1;
     .not_clear();
     transform: rotate(40deg);
