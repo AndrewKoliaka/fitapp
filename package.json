@@ -2,7 +2,7 @@
   "name": "fit_app",
   "version": "1.0.0",
   "description": "fit app lending page",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
