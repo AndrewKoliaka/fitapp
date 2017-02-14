@@ -1,17 +1,51 @@
 footer {
-	background-color: @accent;
-	text-align: center;
-	height: 440px;
-	color: white;
-	h2 {
-		margin-top: 115px;
-		margin-bottom: 35px;
-	}
-	p {
-		margin: 0;
-	}
-	.get_app {
-		margin-top: 60px;
-		.get_app_btn(245px);
-	}
+    background-color: @accent;
+    text-align: center;
+    height: 440px;
+    color: white;
+    position: relative;
+    h2 {
+        margin-top: 115px;
+        margin-bottom: 35px;
+    }
+    p {
+        margin: 0;
+    }
+    .get_app {
+        margin-top: 60px;
+        .get_app_btn(245px);
+    }
+    .footer_tomato {
+        .bg_image('../images/tomato.png', 201px, 291px);
+        .not_clear;
+        left: -50px;
+        top: 170px;
+        transform: rotate(-90deg);
+    }
+    .footer_paprika {
+        .bg_image('../images/Paprika-geel.png', 153px, 168px);
+        .not_clear;
+        top: 50px;
+        left: 80px;
+        transform: rotate(45deg);
+    }
+    .footer_strawberry {
+        .bg_image('../images/strawberries-transparent-1147x1280.png', 111px, 70px, top left);
+        .not_clear;
+        bottom: 0px;
+        left: 300px;
+    }
+    .footer_banana {
+        .bg_image('../images/banana-dreams-02.png', 230px, 188px);
+        .not_clear;
+        right: 50px;
+        bottom: 200px;
+        transform: rotate(45deg);
+    }
+    .footer_apple {
+        .bg_image('../images/apple1.png', 200px, 150px, top left);
+        .not_clear;
+        right: 0;
+        bottom: 0px;
+    }
 }

@@ -131,6 +131,7 @@ footer {
   text-align: center;
   height: 440px;
   color: white;
+  position: relative;
 }
 footer h2 {
   margin-top: 115px;
@@ -151,6 +152,77 @@ footer .get_app {
   border-radius: 20px;
   color: #2ecc71;
   background-color: white;
+}
+footer .footer_tomato {
+  position: absolute;
+  background-image: url('../images/tomato.png');
+  width: 201px;
+  height: 291px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  left: -50px;
+  top: 170px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+footer .footer_paprika {
+  position: absolute;
+  background-image: url('../images/Paprika-geel.png');
+  width: 153px;
+  height: 168px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  top: 50px;
+  left: 80px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+footer .footer_strawberry {
+  position: absolute;
+  background-image: url('../images/strawberries-transparent-1147x1280.png');
+  width: 111px;
+  height: 70px;
+  background-size: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  bottom: 0px;
+  left: 300px;
+}
+footer .footer_banana {
+  position: absolute;
+  background-image: url('../images/banana-dreams-02.png');
+  width: 230px;
+  height: 188px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  right: 50px;
+  bottom: 200px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+footer .footer_apple {
+  position: absolute;
+  background-image: url('../images/apple1.png');
+  width: 200px;
+  height: 150px;
+  background-size: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  right: 0;
+  bottom: 0px;
 }
 header {
   height: 900px;
@@ -219,6 +291,7 @@ header .site-header #header_phone {
   background-repeat: no-repeat;
   right: 50px;
   bottom: 0;
+  z-index: 9999;
 }
 .banana_header {
   position: absolute;
@@ -244,7 +317,7 @@ header .site-header #header_phone {
   background-position: center;
   background-repeat: no-repeat;
   top: 120px;
-  left: 1009px;
+  left: 950px;
   z-index: 1;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -259,8 +332,8 @@ header .site-header #header_phone {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  top: 250px;
-  left: -90px;
+  top: 235px;
+  left: -120px;
   -webkit-filter: blur(4px);
           filter: blur(4px);
   -webkit-transform: rotate(45deg);
@@ -272,11 +345,10 @@ header .site-header #header_phone {
   width: 121px;
   height: 135px;
   background-size: 100%;
-  background-position: center;
+  background-position: top left;
   background-repeat: no-repeat;
   top: 626px;
-  left: 1190px;
-  background-position: top right;
+  left: 1115px;
   z-index: 1;
   -webkit-filter: blur(4px);
           filter: blur(4px);
@@ -286,20 +358,6 @@ header .site-header #header_phone {
 .strawberry2_header {
   top: 800px;
   left: 500px;
-  z-index: 4;
-  position: absolute;
-  background-image: url('../images/strawberries-transparent-1147x1280.png');
-  width: 155px;
-  height: 185px;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-}
-.strawberry3_header {
-  top: 239px;
-  left: 1709px;
   z-index: 4;
   position: absolute;
   background-image: url('../images/strawberries-transparent-1147x1280.png');
@@ -446,6 +504,7 @@ header .site-header #header_phone {
   background-repeat: no-repeat;
   left: 275px;
   bottom: 0;
+  z-index: 9;
 }
 #plan_diet #middle_phone {
   position: absolute;
@@ -460,11 +519,12 @@ header .site-header #header_phone {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 10;
 }
 #plan_diet #right_phone {
   right: 275px;
   bottom: 0;
+  z-index: 9;
   position: absolute;
   background-image: url('../images/diet_right_phone.png');
   width: 253px;
@@ -472,6 +532,66 @@ header .site-header #header_phone {
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
+}
+#plan_diet .diet_paprika {
+  position: absolute;
+  background-image: url('../images/Paprika-geel.png');
+  width: 188px;
+  height: 193px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: -50px;
+  top: 400px;
+}
+#plan_diet .diet_strawberry {
+  position: absolute;
+  background-image: url('../images/strawberries-transparent-1147x1280.png');
+  width: 138px;
+  height: 145px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transform: rotate(80deg);
+          transform: rotate(80deg);
+  top: 450px;
+  right: 100px;
+}
+#plan_diet .diet_apple {
+  position: absolute;
+  background-image: url('../images/apple1.png');
+  width: 224px;
+  height: 305px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  left: 120px;
+  top: 600px;
+}
+#plan_diet .diet_banana {
+  position: absolute;
+  background-image: url('../images/banana-dreams-02.png');
+  width: 227px;
+  height: 361px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 550px;
+  right: 130px;
 }
 @font-face {
   font-family: 'Roboto';

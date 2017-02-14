@@ -48,6 +48,7 @@ header {
             .bg_image('../images/header_phone.png', 404px, 640px, top left);
             right: 50px;
             bottom: 0;
+            z-index: 9999;
         }
     }
 }
@@ -63,7 +64,7 @@ header {
 .tomato_header {
     .bg_image('../images/tamato.png', @width: 250px, @height: 253px);
     top: 120px;
-    left: 1009px;
+    left: 950px;
     z-index: 1;
     transform: rotate(45deg);
     .not_clear();
@@ -71,17 +72,16 @@ header {
 
 .apple_header {
     .bg_image('../images/apple1.png', 176px, 426px);
-    top: 250px;
-    left: -90px;
+    top: 235px;
+    left: -120px;
     .not_clear();
     transform: rotate(45deg);
 }
 
 .strawberry1_header {
-    .bg_image('../images/strawberries-transparent-1147x1280.png', 121px, 135px);
+    .bg_image('../images/strawberries-transparent-1147x1280.png', 121px, 135px, top left);
     top: 626px;
-    left: 1190px;
-    background-position: top right;
+    left: 1115px;
     z-index: 1;
     .not_clear();
     transform: rotate(40deg);
@@ -90,14 +90,6 @@ header {
 .strawberry2_header {
     top: 800px;
     left: 500px;
-    z-index: 4;
-    .bg_image('../images/strawberries-transparent-1147x1280.png', 155px, 185px);
-    .not_clear();
-}
-
-.strawberry3_header {
-    top: 239px;
-    left: 1709px;
     z-index: 4;
     .bg_image('../images/strawberries-transparent-1147x1280.png', 155px, 185px);
     .not_clear();
