@@ -1,0 +1,110 @@
+#manage_time {
+    position: relative;
+    background-color: white;
+    height: 700px;
+    .el_desc {
+        display: none;
+        &:first-of-type {
+            display: block;
+        }
+        margin-top: 250px;
+    }
+    #time_carousel {
+        .carousel_el_wrapper {
+            height: 360px;
+            margin-top: (700px - 360px) / 2;
+            .time_carousel_el {
+                &:first-of-type {
+                    margin-top: 0;
+                }
+                cursor: pointer;
+                margin-top: 30px;
+                margin-right: auto;
+                margin-left: auto;
+                box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.05);
+                border: thin solid #dddddd;
+                border-radius: 8px;
+                width: 420px;
+                height: 100px;
+                transition: all 0.2s ease-in-out;
+                &:hover, &.active_el {
+                    width: 520px;
+                    height: 130px;
+                    .carousel_el_info {
+                        h4 {
+                            font-size: 1.225em;
+                        }
+                        .el_info_desc {
+                            font-size: .963em;
+                        }
+                        .el_info_values {
+                            font-size: .963em;
+                        }
+                    }
+                    .carousel_el_time {
+                        time {
+                            font-size: 1.875em;
+                        }
+                        .pm {
+                            font-size: 1.225em;
+                        }
+                    }
+                }
+                img {
+                    width: 95px;
+                    height: 56px;
+                    margin-right: 20px;
+                    margin-left: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+                .carousel_el_info {
+                    margin-right: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    text-align: left;
+                    h4 {
+                        margin: 0;
+                        font-size: 0.938em;
+                        transition: font-size 0.2s;
+                    }
+                    .el_info_desc {
+                        font-size: .770em;
+                        font-weight: 300;
+                        transition: font-size 0.2s;
+                    }
+                    .el_info_values {
+                        font-size: .770em;
+                        font-weight: 300;
+                        transition: font-size 0.2s;
+                        .dot {
+                            display: inline-block;
+                            margin: auto 10px;
+                            border-radius: 50%;
+                            background-color: #b4b4b4;
+                            width: 4px;
+                            height: 4px;
+                        }
+                    }
+                }
+                .carousel_el_time {
+                    text-align: right;
+                    margin: auto;
+                    time {
+                        font-size: 1.540em;
+                        font-weight: 700;
+                    }
+                    .pm {
+                        color: #b4b4b4;
+                        font-size: 0.980em;
+                        font-weight: 700;
+                        transition: font-size 0.2s;
+                    }
+                    .gray_text {
+                        color: #b4b4b4;
+                    }
+                }
+            }
+        }
+    }
+}

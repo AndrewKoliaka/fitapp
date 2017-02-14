@@ -1,0 +1,19 @@
+{
+  "name": "fit_app",
+  "description": "fit app lending page",
+  "authors": [
+    "andrew koliaka"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/assets/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap-grid-only": "^1.0.0"
+  }
+}

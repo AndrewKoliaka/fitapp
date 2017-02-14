@@ -1,0 +1,111 @@
+#counter_app {
+    position: relative;
+    height: 900px;
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    #counter_app_phone {
+        position: absolute;
+        height: 700px;
+        margin-top: 100px;
+        z-index: 9999;
+    }
+    .feature_desc {
+        margin-top: 380px;
+        margin-left: 30px;
+        display: none;
+        text-align: left;
+        &:first-of-type {
+            display: block;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 30px;
+            line-height: 2em;
+        }
+    }
+}
+
+#curve {
+    @feature_diametr: 60px;
+    @feature_diametr_active: 93px;
+    @curve_diametr: 460px;
+    z-index: 1;
+    height: @curve_diametr;
+    width: @curve_diametr;
+    border: 2px solid #e8e8e8;
+    border-radius: 50%;
+    position: absolute;
+    top: (900px - @curve_diametr) /2;
+    left: 100px;
+    .curve_icon_wrapper {
+        cursor: pointer;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        background-color: #e7e7e7;
+        width: @feature_diametr;
+        height: @feature_diametr;
+        position: absolute;
+        transition: all 0.1s;
+        &:nth-child(1) {
+            top: -8px;
+            left: 290px;
+        }
+        &:nth-child(1):hover,
+        &:nth-child(1).active_el {
+            .active_feature;
+            top: -25px !important;
+            left: 270px !important;
+        }
+        &:nth-child(2) {
+            top: 75px;
+            left: 392px;
+        }
+        &:nth-child(2):hover,
+        &:nth-child(2).active_el {
+            .active_feature;
+            top: @curve_diametr / 4 - 55 !important;
+            left: @curve_diametr - 85 !important;
+        }
+        &:nth-child(3) {
+            top: 200px;
+            left: 430px;
+        }
+        &:nth-child(3):hover,
+        &:nth-child(3).active_el {
+            .active_feature;
+            top: @curve_diametr / 2 - @feature_diametr_active / 2 !important;
+            left: @curve_diametr - @feature_diametr_active / 2 !important;
+        }
+        &:nth-child(4) {
+            bottom: 75px;
+            left: 392px;
+        }
+        &:nth-child(4):hover,
+        &:nth-child(4).active_el {
+            .active_feature;
+            bottom: @curve_diametr / 4 - 55 !important;
+            left: @curve_diametr - 85 !important;
+        }
+        &:nth-child(5) {
+            bottom: -8px;
+            left: 290px;
+        }
+        &:nth-child(5):hover,
+        &:nth-child(5).active_el {
+            .active_feature;
+            bottom: -25px !important;
+            left: 270px !important;
+        }
+        .curve_icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}

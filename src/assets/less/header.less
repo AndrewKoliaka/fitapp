@@ -1,0 +1,104 @@
+header {
+    height: 900px;
+    color: white;
+    background-color: @accent;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    position: relative;
+    .site-nav {
+        font-size: 1.125em;
+        padding-top: 20px;
+        #logo {
+            display: inline-block;
+            margin-top: 17px;
+        }
+        ul {
+            float: right;
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
+                    display: block;
+                    margin-right: 50px;
+                    border-bottom: 2px solid trasparent;
+                    &:not(.get_app):hover {
+                        border-bottom: 2px solid white;
+                    }
+                }
+                .get_app {
+                    .get_app_btn(140px);
+                }
+            }
+        }
+    }
+    .site-header {
+        text-align: left;
+        padding-top: 200px;
+        #header_btns {
+            margin-top: 60px;
+            #google_play_btn {
+                margin-left: 30px;
+            }
+        }
+        h1 {
+            margin-top: 60px;
+            margin-bottom: 25px;
+        }
+        #header_phone {
+            .bg_image('../images/header_phone.png', 404px, 640px, top left);
+            right: 50px;
+            bottom: 0;
+        }
+    }
+}
+
+.banana_header {
+    .bg_image('../images/banana-dreams-02.png', 234px, 192px);
+    left: 450px;
+    top: 92px;
+    .not_clear();
+    transform: rotate(30deg);
+}
+
+.tomato_header {
+    .bg_image('../images/tamato.png', @width: 250px, @height: 253px);
+    top: 120px;
+    left: 1009px;
+    z-index: 1;
+    transform: rotate(45deg);
+    .not_clear();
+}
+
+.apple_header {
+    .bg_image('../images/apple1.png', 176px, 426px);
+    top: 250px;
+    left: -90px;
+    .not_clear();
+    transform: rotate(45deg);
+}
+
+.strawberry1_header {
+    .bg_image('../images/strawberries-transparent-1147x1280.png', 121px, 135px);
+    top: 626px;
+    left: 1190px;
+    background-position: top right;
+    z-index: 1;
+    .not_clear();
+    transform: rotate(40deg);
+}
+
+.strawberry2_header {
+    top: 800px;
+    left: 500px;
+    z-index: 4;
+    .bg_image('../images/strawberries-transparent-1147x1280.png', 155px, 185px);
+    .not_clear();
+}
+
+.strawberry3_header {
+    top: 239px;
+    left: 1709px;
+    z-index: 4;
+    .bg_image('../images/strawberries-transparent-1147x1280.png', 155px, 185px);
+    .not_clear();
+}
