@@ -20,6 +20,7 @@
                     <a href="#" id="logo">
                         <img src="src/assets/images/logo.png" alt="fit app">
                     </a>
+                    <span id="menu-trigger">&#9776;</span>
                     <ul>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Features</a></li>
@@ -39,22 +40,24 @@
                         <a href="#" id="app_store_btn"><img src="src/assets/images/app_store_badge.png"></a>
                         <a href="#" id="google_play_btn"><img src="src/assets/images/google_play_badge.png"></a>
                     </div>
-                    <div id="header_phone"></div>
+                    <div id="header_phone" class="hidden-sm hidden-xs"></div>
                 </div>
             </div>
-            <div class="banana_header"></div>
-            <div class="tomato_header"></div>
-            <div class="apple_header"></div>
-            <div class="strawberry1_header"></div>
-            <div class="strawberry2_header"></div>
+            <div class="hidden-sm hidden-xs">
+                <div class="banana_header"></div>
+                <div class="tomato_header"></div>
+                <div class="apple_header"></div>
+                <div class="strawberry1_header"></div>
+                <div class="strawberry2_header"></div>
+            </div>
         </div>
     </header>
     <!-- header -->
     <section id="counter_app">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img id="counter_app_phone" src="src/assets/images/main_phone.png">
+                <div class="col-md-6 col-lg-6">
+                    <img id="counter_app_phone" class="hidden-xs" src="src/assets/images/main_phone.png">
                     <div id="curve">
                         <div class="curve_icon_wrapper">
                             <div class="curve_icon sprite-sound"></div>
@@ -73,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="feature_desc animated fadeIn">
                         <h2>Best calorie <span class="green_text">counter app!</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -105,14 +108,16 @@
                 <h2>A simple way to <span class="green_text">plan your diet!</span></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     <br> dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <div id="left_phone"></div>
+                <div id="left_phone" class="hidden-sm hidden-xs"></div>
                 <div id="middle_phone"></div>
-                <div id="right_phone"></div>
+                <div id="right_phone" class="hidden-sm hidden-xs"></div>
             </div>
-            <div class="diet_paprika"></div>
-            <div class="diet_strawberry"></div>
-            <div class="diet_apple"></div>
-            <div class="diet_banana"></div>
+            <div class="hidden-sm hidden-xs">
+                <div class="diet_paprika"></div>
+                <div class="diet_strawberry"></div>
+                <div class="diet_apple"></div>
+                <div class="diet_banana"></div>
+            </div>
         </div>
     </section>
     <!-- plan your diet section -->
@@ -139,7 +144,7 @@
                                 <br> magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 hidden-sm hidden-xs">
                     <div id="time_carousel">
                         <div class="carousel_el_wrapper">
                             <div class="time_carousel_el flex">
@@ -205,14 +210,17 @@
                     <br> dolore magna aliqua. Ut enim ad minim veniam.</p>
                 <a href="#" class="get_app">Get App</a>
             </div>
-            <div class="footer_tomato"></div>
-            <div class="footer_paprika"></div>
-            <div class="footer_strawberry"></div>
-            <div class="footer_banana"></div>
-            <div class="footer_apple"></div>
+            <div class="hidden-sm hidden-xs">
+                <div class="footer_tomato"></div>
+                <div class="footer_paprika"></div>
+                <div class="footer_strawberry"></div>
+                <div class="footer_banana"></div>
+                <div class="footer_apple"></div>
+            </div>
         </div>
     </footer>
     <!-- footer -->
+    <script src="src/assets/libs/jquery/jquery.min.js"></script>
     <script src="src/js/main.js"></script>
     <script src="src/js/carousel.js"></script>
 </body>

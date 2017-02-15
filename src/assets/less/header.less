@@ -93,3 +93,58 @@ header {
     .bg_image('../images/strawberries-transparent-1147x1280.png', 155px, 185px);
     .not_clear();
 }
+
+//responsive menu
+#menu-trigger {
+    display: none;
+}
+
+@media (max-width:992px) {
+    .site-nav {
+        #logo {
+            float: left;
+        }
+        #menu-trigger {
+            cursor: pointer;
+            font-size: 40px;
+            line-height: 1;
+            float: right;
+            display: block;
+            margin-right: 20px;
+            margin-top: 10px;
+            &:hover {
+                color: gray;
+            }
+        }
+        ul {
+            display: none;
+            background-color: darken(@accent, 20%);
+            top: 70px;
+            position: absolute;
+            width: 100%;
+            opacity: 0.9;
+            padding: 5px;
+            text-align: center;
+            li {
+                border-bottom: thin solid #b4b4b4;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                width: 100%;
+                margin-top: 10px;
+                a {
+                    margin: 0 auto 10px auto !important;
+                    &:not(.get_app) {
+                        padding: 3px;
+                    }
+                    display: block;
+                    width: 100px;
+                    border: 2px solid lighten(@accent, 20%);
+                    &:not(.get_app):hover {
+                        border-color: white;
+                    }
+                }
+            }
+        }
+    }
+}

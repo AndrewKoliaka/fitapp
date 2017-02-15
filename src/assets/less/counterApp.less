@@ -1,3 +1,6 @@
+@feature_diametr: 60px;
+@feature_diametr_active: 93px;
+@curve_diametr: 460px;
 #counter_app {
     height: 900px;
     background-color: white;
@@ -28,9 +31,6 @@
 }
 
 #curve {
-    @feature_diametr: 60px;
-    @feature_diametr_active: 93px;
-    @curve_diametr: 460px;
     z-index: 1;
     height: @curve_diametr;
     width: @curve_diametr;
@@ -106,5 +106,85 @@
             bottom: 0;
             margin: auto;
         }
+    }
+}
+
+// responsive design
+@media (max-width:992px) {
+    #counter_app_phone {
+        margin-top: 120px !important;
+        height: 200px !important;
+    }
+    #curve {
+        @mini_curve_width: 500px;
+        height: 2px;
+        width: @mini_curve_width;
+        .curve_icon_wrapper {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                top: -(@feature_diametr/2) !important;
+            }
+            &:nth-child(1):hover,
+            &:nth-child(2):hover,
+            &:nth-child(3):hover,
+            &:nth-child(4):hover,
+            &:nth-child(5):hover,
+            &:nth-child(1).active_el,
+            &:nth-child(2).active_el,
+            &:nth-child(3).active_el,
+            &:nth-child(4).active_el,
+            &:nth-child(5).active_el {
+                top: -(@feature_diametr_active / 2) !important;
+            }
+            &:nth-child(1) {
+                left: (@mini_curve_width - @feature_diametr) / 2 - 160px;
+            }
+            &:nth-child(1):hover,
+            &:nth-child(1).active_el {
+                .active_feature;
+                left: (@mini_curve_width - @feature_diametr_active) / 2  - 160px !important;
+            }
+            &:nth-child(2) {
+                left: (@mini_curve_width - @feature_diametr) / 2 - 80px;
+            }
+            &:nth-child(2):hover,
+            &:nth-child(2).active_el {
+                .active_feature;
+                left: (@mini_curve_width - @feature_diametr_active) / 2  - 80px !important;
+            }
+            &:nth-child(3) {
+                left: (@mini_curve_width - @feature_diametr) / 2;
+            }
+            &:nth-child(3):hover,
+            &:nth-child(3).active_el {
+                .active_feature;
+                left: (@mini_curve_width - @feature_diametr_active) / 2 !important;
+            }
+            &:nth-child(4) {
+                left: (@mini_curve_width - @feature_diametr) / 2  + 80px !important;
+            }
+            &:nth-child(4):hover,
+            &:nth-child(4).active_el {
+                .active_feature;
+                left: (@mini_curve_width - @feature_diametr_active) / 2  + 80px !important;
+            }
+            &:nth-child(5) {
+                left: (@mini_curve_width - @feature_diametr) / 2  + 160px !important;
+            }
+            &:nth-child(5):hover,
+            &:nth-child(5).active_el {
+                .active_feature;
+                left: (@mini_curve_width - @feature_diametr_active) / 2  + 160px !important;
+            }
+        }
+    }
+}
+
+@media (max-width:615px) {
+    #curve {
+        display: none;
     }
 }
