@@ -16,11 +16,11 @@ $(document).ready(function () {
 		var featureDescs = $('.feature-desc');
 
 		if (screenWidth < 768) {
-			featureDescs.removeClass('fadeIn').addClass(' slideInRight');
+			featureDescs.removeClass('fadeIn').addClass('fadeInRight');
 			appCarousel.start(8000);
 		} else {
 			toggleMenu.removeAttr('style');
-			featureDescs.addClass('fadeIn').removeClass(' slideInRight');
+			featureDescs.addClass('fadeIn').removeClass('fadeInRight');
 		}
 	}
 
