@@ -1,4 +1,4 @@
-#plan_diet {
+#plan-diet {
     text-align: center;
     height: 900px;
     background-color: #f9f9f9;
@@ -6,14 +6,14 @@
         margin-top: 110px;
         margin-bottom: 30px;
     }
-    #left_phone {
-        .bg_image('../images/diet_left_phone.png', 253px, 447px, top center);
+    #left-phone {
+        .bg-image('diet_left_phone.png', 253px, 447px, top center);
         left: 190px;
         bottom: 0;
         z-index: 9;
     }
-    #middle_phone {
-        .bg_image('../images/diet_middle_phone.png', 337px, 545px, top center);
+    #middle-phone {
+        .bg-image('diet_middle_phone.png', 337px, 545px, top center);
         margin-right: auto;
         margin-left: auto;
         left: 0;
@@ -21,39 +21,50 @@
         bottom: 0;
         z-index: 10;
     }
-    #right_phone {
+    #right-phone {
         right: 190px;
         bottom: 0;
         z-index: 9;
-        .bg_image('../images/diet_right_phone.png', 253px, 451px, top center);
+        .bg-image('diet_right_phone.png', 253px, 451px, top center);
     }
-    .diet_paprika {
-        .bg_image('../images/Paprika-geel.png', 188px, 193px);
-        .not_clear;
+    .diet-paprika {
+        .bg-image('Paprika-geel.png', 188px, 193px);
+        &:extend(.not-clear);
         transform: rotate(-45deg);
         left: -50px;
         top: 300px;        
     }
-    .diet_strawberry {
-        .bg_image('../images/strawberries-transparent-1147x1280.png', 138px, 145px);
-        .not_clear;
+    .diet-strawberry {
+        .bg-image('strawberries-transparent-1147x1280.png', 138px, 145px);
+        &:extend(.not-clear);
         transform: rotate(80deg);
         top: 370px;        
         right: 10px;
     }
-    .diet_apple {
-        .bg_image('../images/apple1.png', 224px, 305px);
-        .not_clear;
+    .diet-apple {
+        .bg-image('apple1.png', 224px, 305px);
+        &:extend(.not-clear);
         transform: rotate(30deg);
         left: 30px;
         top: 600px;
     }
 
-    .diet_banana {
-        .bg_image('../images/banana-dreams-02.png', 227px, 150px);
-        .not_clear;
+    .diet-banana {
+        .bg-image('banana-dreams-02.png', 227px, 150px);
+        &:extend(.not-clear);
         transform: rotate(70deg);
         top: 650px;
         right: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #plan-diet {
+        height: auto;
+        h2 { margin-top: 80px; }
+        p { margin-bottom: 400px; }
+        #middle-phone {
+            .bg-image('diet_middle_phone.png', 200px, 350px, top center);
+        }
     }
 }

@@ -1,6 +1,6 @@
-.bg_image(@url, @width: 100px, @height: 100px, @pos: center) {
+.bg-image(@imageName, @width: 100px, @height: 100px, @pos: center) {
     position: absolute;
-    background-image: url(@url);
+    background-image: url("@{images}@{imageName}");
     width: @width;
     height: @height;
     background-size: 100%;
@@ -8,19 +8,19 @@
     background-repeat: no-repeat;
 }
 
-.not_clear {
+.not-clear {
     filter: blur(4px);
 }
 
-.active_feature {
+.active-feature {
     box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.15);
     width: 88px !important;
     height: 88px !important;
-    border: 5px solid white !important;
+    border: 4px solid white !important;
     background-color: @accent !important;
 }
 
-.get_app_btn(@width: 100px) {
+.get-app-btn(@width: 100px) {
     display: inline-block;
     height: 42px;
     width: @width;

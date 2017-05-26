@@ -11,21 +11,21 @@ header {
             display: inline-block;
             margin-top: 17px;
         }
-        ul {
+        #nav-menu-list {
             float: right;
             list-style: none;
-            li {
+            .nav-menu-element {
                 display: inline-block;
                 a {
                     display: block;
                     margin-right: 50px;
                     border-bottom: 2px solid trasparent;
-                    &:not(.get_app):hover {
+                    &:not(.get-app):hover {
                         border-bottom: 2px solid white;
                     }
                 }
-                .get_app {
-                    .get_app_btn(140px);
+                .get-app {
+                    .get-app-btn(140px);
                 }
             }
         }
@@ -33,9 +33,9 @@ header {
     .site-header {
         text-align: left;
         padding-top: 200px;
-        #header_btns {
+        #header-btns {
             margin-top: 60px;
-            #google_play_btn {
+            #google-play-btn {
                 margin-left: 30px;
             }
         }
@@ -43,8 +43,8 @@ header {
             margin-top: 60px;
             margin-bottom: 25px;
         }
-        #header_phone {
-            .bg_image('../images/header_phone.png', 404px, 640px, top left);
+        #header-phone {
+            .bg-image('header_phone.png', 404px, 640px, top left);
             bottom: 0;
             right: 20px;
             z-index: 9999;
@@ -52,99 +52,113 @@ header {
     }
 }
 
-.banana_header {
-    .bg_image('../images/banana-dreams-02.png', 234px, 192px);
+.banana-header {
+    .bg-image('banana-dreams-02.png', 234px, 192px);
     left: 300px;
     top: 120px;
-    .not_clear();
+    &:extend(.not-clear);
     transform: rotate(30deg);
 }
 
-.tomato_header {
-    .bg_image('../images/tamato.png', @width: 250px, @height: 253px);
+.tomato-header {
+    .bg-image('tamato.png', @width: 250px, @height: 253px);
     top: 120px;
     left: 900px;
     z-index: 1;
     transform: rotate(45deg);
-    .not_clear();
+    &:extend(.not-clear);
 }
 
-.apple_header {
-    .bg_image('../images/apple1.png', 176px, 426px);
+.apple-header {
+    .bg-image('apple1.png', 176px, 426px);
     top: 230px;
     left: -170px;
-    .not_clear();
+    &:extend(.not-clear);
     transform: rotate(45deg);
 }
 
-.strawberry1_header {
-    .bg_image('../images/strawberries-transparent-1147x1280.png', 121px, 135px, top left);
+.strawberry1-header {
+    .bg-image('strawberries-transparent-1147x1280.png', 121px, 135px, top left);
     top: 626px;
     left: 1060px;
     z-index: 1;
-    .not_clear();
+    &:extend(.not-clear);
     transform: rotate(40deg);
 }
 
-.strawberry2_header {
+.strawberry2-header {
     top: 800px;
     left: 500px;
     z-index: 4;
-    .bg_image('../images/strawberries-transparent-1147x1280.png', 155px, 185px);
-    .not_clear();
+    .bg-image('strawberries-transparent-1147x1280.png', 155px, 185px);
+    &:extend(.not-clear);
 }
 
-//responsive menu
-#menu-trigger {
-    display: none;
-}
-
-@media (max-width:992px) {
-    .site-nav {
-        #logo {
-            float: left;
-        }
-        #menu-trigger {
-            cursor: pointer;
-            font-size: 40px;
-            line-height: 1;
-            float: right;
-            display: block;
-            margin-right: 20px;
-            margin-top: 10px;
-            &:hover {
-                color: gray;
-            }
-        }
-        ul {
-            display: none;
-            background-color: darken(@accent, 20%);
-            top: 70px;
-            position: absolute;
-            width: 100%;
-            opacity: 0.9;
-            padding: 5px;
-            text-align: center;
-            li {
-                border-bottom: thin solid @gray;
-                &:last-of-type {
-                    border-bottom: none;
-                }
-                width: 100%;
-                margin-top: 10px;
-                a {
-                    margin: 0 auto 10px auto !important;
-                    &:not(.get_app) {
-                        padding: 3px;
-                    }
-                    display: block;
-                    width: 100px;
-                    border: 2px solid lighten(@accent, 20%);
-                    &:not(.get_app):hover {
-                        border-color: white;
-                    }
-                }
-            }
+@media screen and (max-width: 1200px) {
+    header .site-header {
+        #header-phone {
+            .bg-image('header_phone.png', 300px, 500px, top left);
         }
     }
 }
+
+@media screen and ( max-width:992px ) {
+    header {
+        height: auto;
+        padding-bottom: 50px;
+        .site-nav {
+            #logo { 
+                float: left;
+                margin-left: 10px;
+            }
+
+            #menu-trigger {
+                cursor: pointer;
+                font-size: 40px;
+                line-height: 1;
+                float: right;
+                display: block;
+                margin-right: 20px;
+                margin-top: 10px;
+                &:hover {
+                    color: gray;
+                }
+            }
+            #nav-menu-list {
+                display: none;
+                background-color: darken(@accent, 10%);
+                top: 70px;
+                position: absolute;
+                width: 100%;
+                padding: 5px;
+                text-align: center;
+                .nav-menu-element {
+                    width: 100%;
+                    margin-top: 10px;
+
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+                    a {
+                        display: block;
+                        width: 100px;
+                        margin: 0 auto 10px auto !important;
+                        border-bottom: 2px solid transparent;
+                        &:not(.get-app) {
+                            padding: 3px;
+                        }
+                        
+                        &:not(.get-app):hover, &:not(.get-app):focus {
+                            border-color: white;
+                        } // hover
+                    } // a
+                } // .nav-mene-element
+            } // #nav-menu-list
+        } // .site-nav
+
+        .site-header {
+            padding-left: 10px;
+            padding-top: 120px;
+        } // .site-header
+    } // header
+} // media

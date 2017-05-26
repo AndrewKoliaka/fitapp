@@ -10,6 +10,7 @@ const pathTo = {
     less: "src/assets/less/**/*.less",
     js: "src/js/*.js",
     css: 'src/assets/css/*.css',
+    html: 'index.html',
     root: './'
 }
 
@@ -26,14 +27,24 @@ gulp.task('less', () => {
         .pipe(concat('styles.css'))
         .pipe(less())
         .pipe(autoprefixer())
-        .pipe(gulp.dest('src/assets/css/'));
+        .pipe(gulp.dest('src/assets/css/'))
+        .pipe(connect.reload());
+});
+
+gulp.task('js', () => {
+    gulp.src(pathTo.js)
+        .pipe(connect.reload());
+});
+
+gulp.task('html', () => {
+    gulp.src(pathTo.html)
+        .pipe(connect.reload());
 });
 
 gulp.task('watch', () => {
     gulp.watch(pathTo.less, ['less']);
-    gulp.watch(pathTo.js).on('change', connect.reload);
-    gulp.watch(pathTo.css).on('change', connect.reload);
-    gulp.watch('index.html').on('change', connect.reload);
+    gulp.watch(pathTo.js, ['js']);
+    gulp.watch(pathTo.html, ['html']);
 });
 
 gulp.task('default', ['less', 'server', 'watch']);

@@ -1,18 +1,19 @@
-@feature_diametr: 60px;
-@feature_diametr_active: 93px;
-@curve_diametr: 460px;
-#counter_app {
+@feature-diametr: 60px;
+@feature-diametr-active: 93px;
+@curve-diametr: 460px;
+
+#counter-app {
     height: 900px;
-    background-color: white;
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    #counter_app_phone {
+    background-color: white;
+    #counter-app-phone {
         position: absolute;
         height: 700px;
         margin-top: 100px;
         z-index: 9999;
     }
-    .feature_desc {
+    .feature-desc {
         margin-top: 380px;
         margin-left: 30px;
         display: none;
@@ -20,10 +21,10 @@
         &:first-of-type {
             display: block;
         }
-        h2 {
+        .feature-name {
             margin-bottom: 0;
         }
-        p {
+        .feature-text {
             margin-top: 30px;
             line-height: 2em;
         }
@@ -32,73 +33,32 @@
 
 #curve {
     z-index: 1;
-    height: @curve_diametr;
-    width: @curve_diametr;
+    height: @curve-diametr;
+    width: @curve-diametr;
     border: 2px solid #e8e8e8;
     border-radius: 50%;
     position: absolute;
-    top: (900px - @curve_diametr) /2;
+    top: (900px - @curve-diametr) /2;
     left: 100px;
-    .curve_icon_wrapper {
+    .curve-icon-wrapper {
         cursor: pointer;
         border-radius: 50%;
         border: 5px solid transparent;
         background-color: #e7e7e7;
-        width: @feature_diametr;
-        height: @feature_diametr;
+        width: @feature-diametr;
+        height: @feature-diametr;
         position: absolute;
         transition: all 0.1s;
-        &:nth-child(1) {
-            top: -8px;
-            left: 290px;
+        
+        &:nth-child(1).active-el,
+        &:nth-child(2).active-el,
+        &:nth-child(3).active-el,
+        &:nth-child(4).active-el,
+        &:nth-child(5).active-el {
+            &:extend(.active-feature);
         }
-        &:nth-child(1):hover,
-        &:nth-child(1).active_el {
-            .active_feature;
-            top: -25px !important;
-            left: 270px !important;
-        }
-        &:nth-child(2) {
-            top: 75px;
-            left: 392px;
-        }
-        &:nth-child(2):hover,
-        &:nth-child(2).active_el {
-            .active_feature;
-            top: @curve_diametr / 4 - 55 !important;
-            left: @curve_diametr - 85 !important;
-        }
-        &:nth-child(3) {
-            top: 200px;
-            left: 430px;
-        }
-        &:nth-child(3):hover,
-        &:nth-child(3).active_el {
-            .active_feature;
-            top: @curve_diametr / 2 - @feature_diametr_active / 2 !important;
-            left: @curve_diametr - @feature_diametr_active / 2 !important;
-        }
-        &:nth-child(4) {
-            bottom: 75px;
-            left: 392px;
-        }
-        &:nth-child(4):hover,
-        &:nth-child(4).active_el {
-            .active_feature;
-            bottom: @curve_diametr / 4 - 55 !important;
-            left: @curve_diametr - 85 !important;
-        }
-        &:nth-child(5) {
-            bottom: -8px;
-            left: 290px;
-        }
-        &:nth-child(5):hover,
-        &:nth-child(5).active_el {
-            .active_feature;
-            bottom: -25px !important;
-            left: 270px !important;
-        }
-        .curve_icon {
+
+        .curve-icon {
             position: absolute;
             top: 0;
             left: 0;
@@ -109,82 +69,158 @@
     }
 }
 
-// responsive design
-@media (max-width:1050px) {
-    #counter_app_phone {
-        margin-top: 120px !important;
-        height: 200px !important;
-    }
+@media screen and (min-width: 1200px) {
     #curve {
-        @mini_curve_width: 500px;
-        height: 2px;
-        width: @mini_curve_width;
-        .curve_icon_wrapper {
-            &:nth-child(1),
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4),
-            &:nth-child(5) {
-                top: -(@feature_diametr/2) !important;
-            }
-            &:nth-child(1):hover,
-            &:nth-child(2):hover,
-            &:nth-child(3):hover,
-            &:nth-child(4):hover,
-            &:nth-child(5):hover,
-            &:nth-child(1).active_el,
-            &:nth-child(2).active_el,
-            &:nth-child(3).active_el,
-            &:nth-child(4).active_el,
-            &:nth-child(5).active_el {
-                top: -(@feature_diametr_active / 2) !important;
-            }
+        .curve-icon-wrapper {      
             &:nth-child(1) {
-                left: (@mini_curve_width - @feature_diametr) / 2 - 160px;
+                top: -8px;
+                left: 290px;
             }
             &:nth-child(1):hover,
-            &:nth-child(1).active_el {
-                .active_feature;
-                left: (@mini_curve_width - @feature_diametr_active) / 2  - 160px !important;
+            &:nth-child(1).active-el {
+                .active-feature;
+                top: -25px;
+                left: 270px;
             }
             &:nth-child(2) {
-                left: (@mini_curve_width - @feature_diametr) / 2 - 80px;
+                top: 75px;
+                left: 392px;
             }
             &:nth-child(2):hover,
-            &:nth-child(2).active_el {
-                .active_feature;
-                left: (@mini_curve_width - @feature_diametr_active) / 2  - 80px !important;
+            &:nth-child(2).active-el {
+                .active-feature;
+                top: @curve-diametr / 4 - 55;
+                left: @curve-diametr - 85;
             }
             &:nth-child(3) {
-                left: (@mini_curve_width - @feature_diametr) / 2;
+                top: 200px;
+                left: 430px;
             }
             &:nth-child(3):hover,
-            &:nth-child(3).active_el {
-                .active_feature;
-                left: (@mini_curve_width - @feature_diametr_active) / 2 !important;
+            &:nth-child(3).active-el {
+                .active-feature;
+                top: @curve-diametr / 2 - @feature-diametr-active / 2;
+                left: @curve-diametr - @feature-diametr-active / 2;
             }
             &:nth-child(4) {
-                left: (@mini_curve_width - @feature_diametr) / 2  + 80px !important;
+                bottom: 75px;
+                left: 392px;
             }
             &:nth-child(4):hover,
-            &:nth-child(4).active_el {
-                .active_feature;
-                left: (@mini_curve_width - @feature_diametr_active) / 2  + 80px !important;
+            &:nth-child(4).active-el {
+                .active-feature;
+                bottom: @curve-diametr / 4 - 55;
+                left: @curve-diametr - 85;
             }
             &:nth-child(5) {
-                left: (@mini_curve_width - @feature_diametr) / 2  + 160px !important;
+                bottom: -8px;
+                left: 290px;
             }
             &:nth-child(5):hover,
-            &:nth-child(5).active_el {
-                .active_feature;
-                left: (@mini_curve_width - @feature_diametr_active) / 2  + 160px !important;
+            &:nth-child(5).active-el {
+                .active-feature;
+                bottom: -25px;
+                left: 270px;
             }
         }
     }
 }
 
-@media (max-width:615px) {
+@media screen and (max-width: 1199px) {
+    #counter-app-phone {
+        margin-top: 120px;
+        height: 200px;
+    }
     #curve {
-        display: none;
+        @mini-curve-width: 500px;
+        @featureCenterX: (@mini-curve-width - @feature-diametr) / 2;
+        @featureCenterXActive: (@mini-curve-width - @feature-diametr-active) / 2;
+
+        height: 2px;
+        width: @mini-curve-width;
+        left: auto;
+        right: 50px;
+        top: 300px;
+        .curve-icon-wrapper {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                top: -(@feature-diametr/2);
+            }
+            
+            &:nth-child(1).active-el,
+            &:nth-child(2).active-el,
+            &:nth-child(3).active-el,
+            &:nth-child(4).active-el,
+            &:nth-child(5).active-el {
+                top: -(@feature-diametr-active / 2);
+            }
+            &:nth-child(1) {
+                left: @featureCenterX - 160px;
+            }
+            &:nth-child(1).active-el {
+                left: @featureCenterXActive - 160px;
+            }
+            &:nth-child(2) {
+                left: @featureCenterX - 80px;
+            }
+            &:nth-child(2).active-el {
+                left: @featureCenterXActive - 77px;
+            }
+            &:nth-child(3) {
+                left: @featureCenterX;
+            }
+            &:nth-child(3).active-el {
+                left: @featureCenterXActive;
+            }
+            &:nth-child(4) {
+                right: @featureCenterX  - 80px;
+            }
+            &:nth-child(4).active-el {
+                right: @featureCenterXActive - 80px;
+            }
+            &:nth-child(5) {
+                right: @featureCenterX  - 160px;
+            }
+            &:nth-child(5).active-el {
+                right: @featureCenterXActive - 160px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #counter-app {
+        height: auto;
+        padding: 200px 0;
+
+        #curve {
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feature-desc {
+            margin-top: 100px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:615px) {
+    #counter-app {
+        height: auto;
+        padding: 0;
+        text-align: center;
+        padding: 100px 0;
+        .feature-desc {
+            margin: 0;
+        }
+        #curve {
+            display: none;
+        }
     }
 }

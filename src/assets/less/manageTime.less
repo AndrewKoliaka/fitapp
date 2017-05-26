@@ -1,19 +1,17 @@
-#manage_time {
+#manage-time {
     
     background-color: white;
     height: 700px;
-    .el_desc {
+    .el-desc {
         display: none;
-        &:first-of-type {
-            display: block;
-        }
         margin-top: 250px;
+        &:first-of-type { display: block; }
     }
-    #time_carousel {
-        .carousel_el_wrapper {
+    #time-carousel {
+        .carousel-el-wrapper {
             height: 360px;
             margin-top: (700px - 360px) / 2;
-            .time_carousel_el {
+            .time-carousel-el {
                 &:first-of-type {
                     margin-top: 0;
                 }
@@ -27,21 +25,21 @@
                 width: 420px;
                 height: 100px;
                 transition: all 0.2s ease-in-out;
-                &:hover, &.active_el {
+                &:hover, &.active-el {
                     width: 520px;
                     height: 130px;
-                    .carousel_el_info {
+                    .carousel-el-info {
                         h4 {
                             font-size: 1.225em;
                         }
-                        .el_info_desc {
+                        .el-info-desc {
                             font-size: .963em;
                         }
-                        .el_info_values {
+                        .el-info-values {
                             font-size: .963em;
                         }
                     }
-                    .carousel_el_time {
+                    .carousel-el-time {
                         time {
                             font-size: 1.875em;
                         }
@@ -58,7 +56,7 @@
                     margin-top: auto;
                     margin-bottom: auto;
                 }
-                .carousel_el_info {
+                .carousel-el-info {
                     margin-right: auto;
                     margin-top: auto;
                     margin-bottom: auto;
@@ -68,12 +66,12 @@
                         font-size: 0.938em;
                         transition: font-size 0.2s;
                     }
-                    .el_info_desc {
+                    .el-info-desc {
                         font-size: .770em;
                         font-weight: 300;
                         transition: font-size 0.2s;
                     }
-                    .el_info_values {
+                    .el-info-values {
                         font-size: .770em;
                         font-weight: 300;
                         transition: font-size 0.2s;
@@ -87,7 +85,7 @@
                         }
                     }
                 }
-                .carousel_el_time {
+                .carousel-el-time {
                     text-align: right;
                     margin: auto;
                     time {
@@ -100,11 +98,35 @@
                         font-weight: 700;
                         transition: font-size 0.2s;
                     }
-                    .gray_text {
+                    .gray-text {
                         color: @gray;
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #manage-time {
+        .carousel-el-wrapper {
+            .time-carousel-el {
+                width: 300px !important;
+                padding-left: 30px;
+                &.active-el {
+                    width: 400px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #manage-time {
+        height: auto;
+        padding: 100px 0;
+        .el-desc {
+            margin-top: 0;
         }
     }
 }
