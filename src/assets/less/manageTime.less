@@ -1,132 +1,129 @@
-#manage-time {
-    
-    background-color: white;
+.manage-time {
+    background-color: @secondary;
     height: 700px;
-    .el-desc {
-        display: none;
-        margin-top: 250px;
-        &:first-of-type { display: block; }
+}
+
+// carousel
+.carousel-wrapper {
+    height: 360px;
+    margin-top: (700px - 360px) / 2;
+}
+
+.carousel-el {
+    &:first-of-type {
+        margin-top: 0;
     }
-    #time-carousel {
-        .carousel-el-wrapper {
-            height: 360px;
-            margin-top: (700px - 360px) / 2;
-            .time-carousel-el {
-                &:first-of-type {
-                    margin-top: 0;
-                }
-                cursor: pointer;
-                margin-top: 30px;
-                margin-right: auto;
-                margin-left: auto;
-                box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.05);
-                border: thin solid #dddddd;
-                border-radius: 8px;
-                width: 420px;
-                height: 100px;
-                transition: all 0.2s ease-in-out;
-                &:hover, &.active-el {
-                    width: 520px;
-                    height: 130px;
-                    .carousel-el-info {
-                        h4 {
-                            font-size: 1.225em;
-                        }
-                        .el-info-desc {
-                            font-size: .963em;
-                        }
-                        .el-info-values {
-                            font-size: .963em;
-                        }
-                    }
-                    .carousel-el-time {
-                        time {
-                            font-size: 1.875em;
-                        }
-                        .pm {
-                            font-size: 1.225em;
-                        }
-                    }
-                }
-                img {
-                    width: 95px;
-                    height: 56px;
-                    margin-right: 20px;
-                    margin-left: auto;
-                    margin-top: auto;
-                    margin-bottom: auto;
-                }
-                .carousel-el-info {
-                    margin-right: auto;
-                    margin-top: auto;
-                    margin-bottom: auto;
-                    text-align: left;
-                    h4 {
-                        margin: 0;
-                        font-size: 0.938em;
-                        transition: font-size 0.2s;
-                    }
-                    .el-info-desc {
-                        font-size: .770em;
-                        font-weight: 300;
-                        transition: font-size 0.2s;
-                    }
-                    .el-info-values {
-                        font-size: .770em;
-                        font-weight: 300;
-                        transition: font-size 0.2s;
-                        .dot {
-                            display: inline-block;
-                            margin: auto 10px;
-                            border-radius: 50%;
-                            background-color: @gray;
-                            width: 4px;
-                            height: 4px;
-                        }
-                    }
-                }
-                .carousel-el-time {
-                    text-align: right;
-                    margin: auto;
-                    time {
-                        font-size: 1.540em;
-                        font-weight: 700;
-                    }
-                    .pm {
-                        color: @gray;
-                        font-size: 0.980em;
-                        font-weight: 700;
-                        transition: font-size 0.2s;
-                    }
-                    .gray-text {
-                        color: @gray;
-                    }
-                }
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.05);
+    border: thin solid #dddddd;
+    border-radius: 8px;
+    width: 420px;
+    height: 100px;
+    transition: all 0.2s ease-in-out;
+    &:hover,
+    &.active-el {
+        width: 520px;
+        height: 130px;
+        .el-info {
+            &__header {
+                font-size: 1.225em;
             }
+            &__desc {
+                font-size: .963em;
+            }
+            &__values {
+                font-size: .963em;
+            }
+        }
+        &__time {
+            .time {
+                font-size: 1.875em;
+            }
+            .pm {
+                font-size: 1.225em;
+            }
+        }
+    }
+    &__img {
+        width: 95px;
+        height: 56px;
+        margin-right: 20px;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .el-info {
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: left;
+        &__header {
+            margin: 0;
+            font-size: 0.938em;
+            transition: font-size 0.2s;
+        }
+        &__desc {
+            font-size: .770em;
+            font-weight: 300;
+            transition: font-size 0.2s;
+        }
+        &__values {
+            font-size: .770em;
+            font-weight: 300;
+            transition: font-size 0.2s;
+            .dot {
+                display: inline-block;
+                margin: auto 10px;
+                border-radius: 50%;
+                background-color: @gray;
+                width: 4px;
+                height: 4px;
+            }
+        }
+    }
+    &__time {
+        text-align: right;
+        margin: auto;
+        .time {
+            font-size: 1.540em;
+            font-weight: 700;
+        }
+        .pm {
+            color: @gray;
+            font-size: 0.980em;
+            font-weight: 700;
+            transition: font-size 0.2s;
         }
     }
 }
 
+.carousel-el-desc {
+    display: none;
+    margin-top: 250px;
+    &:first-of-type {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 1200px) {
-    #manage-time {
-        .carousel-el-wrapper {
-            .time-carousel-el {
-                width: 300px !important;
-                padding-left: 30px;
-                &.active-el {
-                    width: 400px !important;
-                }
-            }
+    .carousel-el {
+        width: 300px !important;
+        padding-left: 30px;
+        &.active-el {
+            width: 400px !important;
         }
     }
 }
 
 @media screen and (max-width: 768px) {
-    #manage-time {
+    .manage-time {
         height: auto;
         padding: 100px 0;
-        .el-desc {
-            margin-top: 0;
-        }
+    }
+    .carousel-el-desc {
+        margin-top: 0;
     }
 }

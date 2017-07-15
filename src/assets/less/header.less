@@ -1,164 +1,160 @@
-header {
+.header {
     height: 900px;
-    color: white;
+    color: @secondary;
     background-color: @accent;
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    .site-nav {
-        font-size: 1.125em;
-        padding-top: 20px;
-        #logo {
-            display: inline-block;
-            margin-top: 17px;
-        }
-        #nav-menu-list {
-            float: right;
-            list-style: none;
-            .nav-menu-element {
-                display: inline-block;
-                a {
-                    display: block;
-                    margin-right: 50px;
-                    border-bottom: 2px solid trasparent;
-                    &:not(.get-app):hover {
-                        border-bottom: 2px solid white;
-                    }
-                }
-                .get-app {
-                    .get-app-btn(140px);
-                }
-            }
+}
+
+.header-body {
+    text-align: left;
+    padding-top: 200px;
+    &__big-text {
+        margin-top: 60px;
+        margin-bottom: 25px;
+    }
+    &__btns {
+        margin-top: 60px;
+        #google-play-btn {
+            margin-left: 30px;
         }
     }
-    .site-header {
-        text-align: left;
-        padding-top: 200px;
-        #header-btns {
-            margin-top: 60px;
-            #google-play-btn {
-                margin-left: 30px;
-            }
-        }
-        h1 {
-            margin-top: 60px;
-            margin-bottom: 25px;
-        }
-        #header-phone {
-            .bg-image('header_phone.png', 404px, 640px, top left);
-            bottom: 0;
-            right: 20px;
-            z-index: 9999;
-        }
+    &__phone-img {
+        .bg-image('header_phone.png', 404px, 640px, top left);
+        bottom: 0;
+        right: 20px;
+        z-index: 9999;
     }
 }
 
-.banana-header {
-    .bg-image('banana-dreams-02.png', 234px, 192px);
-    left: 300px;
-    top: 120px;
-    &:extend(.not-clear);
-    transform: rotate(30deg);
+.site-nav {
+    font-size: 1.125em;
+    padding-top: 20px;
+    &__logo {
+        display: inline-block;
+        margin-top: 17px;
+    }
 }
 
-.tomato-header {
-    .bg-image('tamato.png', @width: 250px, @height: 253px);
-    top: 120px;
-    left: 900px;
-    z-index: 1;
-    transform: rotate(45deg);
-    &:extend(.not-clear);
+.nav-menu {
+    float: right;
+    list-style: none;
+    &__el {
+        display: inline-block;
+    }
+    &__link {
+        display: block;
+        margin-right: 50px;
+        border-bottom: 2px solid trasparent;
+        &:not(&--get-app):hover {
+            border-bottom: 2px solid @secondary;
+        }
+        &--get-app {
+            .get-app-btn(140px);
+        }
+    }
 }
 
-.apple-header {
-    .bg-image('apple1.png', 176px, 426px);
-    top: 230px;
-    left: -170px;
-    &:extend(.not-clear);
-    transform: rotate(45deg);
-}
-
-.strawberry1-header {
-    .bg-image('strawberries-transparent-1147x1280.png', 121px, 135px, top left);
-    top: 626px;
-    left: 1060px;
-    z-index: 1;
-    &:extend(.not-clear);
-    transform: rotate(40deg);
-}
-
-.strawberry2-header {
-    top: 800px;
-    left: 500px;
-    z-index: 4;
-    .bg-image('strawberries-transparent-1147x1280.png', 155px, 185px);
-    &:extend(.not-clear);
+.header-imgs {
+    &__banana {
+        .bg-image('banana-dreams-02.png', 234px, 192px);
+        left: 300px;
+        top: 120px;
+        &:extend(.not-clear);
+        transform: rotate(30deg);
+    }
+    &__tomato {
+        .bg-image('tamato.png', @width: 250px, @height: 253px);
+        top: 120px;
+        left: 900px;
+        z-index: 1;
+        transform: rotate(45deg);
+        &:extend(.not-clear);
+    }
+    &__apple {
+        .bg-image('apple1.png', 176px, 426px);
+        top: 230px;
+        left: -170px;
+        &:extend(.not-clear);
+        transform: rotate(45deg);
+    }
+    &__strawberry1 {
+        .bg-image('strawberries-transparent-1147x1280.png', 121px, 135px, top left);
+        top: 626px;
+        left: 1060px;
+        z-index: 1;
+        &:extend(.not-clear);
+        transform: rotate(40deg);
+    }
+    &__strawberry2 {
+        top: 800px;
+        left: 500px;
+        z-index: 4;
+        .bg-image('strawberries-transparent-1147x1280.png', 155px, 185px);
+        &:extend(.not-clear);
+    }
 }
 
 @media screen and (max-width: 1200px) {
-    header .site-header {
-        #header-phone {
-            .bg-image('header_phone.png', 300px, 500px, top left);
-        }
+    .header-body__phone-img {
+        .bg-image('header_phone.png', 300px, 500px, top left);
     }
 }
 
-@media screen and ( max-width:992px ) {
-    header {
+@media screen and ( max-width:992px) {
+    .header {
         height: auto;
         padding-bottom: 50px;
-        .site-nav {
-            #logo { 
-                float: left;
-                margin-left: 10px;
+    }
+    .site-nav {
+        &__logo {
+            float: left;
+            margin-left: 10px;
+        }
+        &__menu-trigger {
+            cursor: pointer;
+            font-size: 40px;
+            line-height: 1;
+            float: right;
+            display: block;
+            margin-right: 20px;
+            margin-top: 10px;
+            &:hover {
+                color: @gray;
             }
-
-            #menu-trigger {
-                cursor: pointer;
-                font-size: 40px;
-                line-height: 1;
-                float: right;
-                display: block;
-                margin-right: 20px;
-                margin-top: 10px;
-                &:hover {
-                    color: gray;
-                }
+        }
+    }
+    .nav-menu {
+        display: none;
+        background-color: darken(@accent, 10%);
+        top: 70px;
+        position: absolute;
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+        &__el {
+            width: 100%;
+            margin-top: 10px;
+            &:last-of-type {
+                border-bottom: none;
             }
-            #nav-menu-list {
-                display: none;
-                background-color: darken(@accent, 10%);
-                top: 70px;
-                position: absolute;
-                width: 100%;
-                padding: 5px;
-                text-align: center;
-                .nav-menu-element {
-                    width: 100%;
-                    margin-top: 10px;
-
-                    &:last-of-type {
-                        border-bottom: none;
-                    }
-                    a {
-                        display: block;
-                        width: 100px;
-                        margin: 0 auto 10px auto !important;
-                        border-bottom: 2px solid transparent;
-                        &:not(.get-app) {
-                            padding: 3px;
-                        }
-                        
-                        &:not(.get-app):hover, &:not(.get-app):focus {
-                            border-color: white;
-                        } // hover
-                    } // a
-                } // .nav-mene-element
-            } // #nav-menu-list
-        } // .site-nav
-
-        .site-header {
-            padding-left: 10px;
-            padding-top: 120px;
-        } // .site-header
-    } // header
-} // media
+        }
+        &__link {
+            display: block;
+            width: 100px;
+            margin: 0 auto 10px auto !important;
+            border-bottom: 2px solid transparent;
+            &:not(&--get-app) {
+                padding: 3px;
+            }
+            &:not(&--get-app):hover,
+            &:not(&--get-app):focus {
+                border-color: @secondary;
+            }
+        }
+    }
+    .header-body {
+        padding-left: 10px;
+        padding-top: 120px;
+    }
+}

@@ -1,32 +1,32 @@
-#counter-app {
+.counter-app {
   height: 900px;
   font-family: Roboto, sans-serif;
   font-weight: 300;
   background-color: white;
 }
-#counter-app #counter-app-phone {
+.counter-app__phone-img {
   position: absolute;
   height: 700px;
   margin-top: 100px;
   z-index: 9999;
 }
-#counter-app .feature-desc {
+.feature-desc {
   margin-top: 380px;
   margin-left: 30px;
   display: none;
   text-align: left;
 }
-#counter-app .feature-desc:first-of-type {
+.feature-desc:first-of-type {
   display: block;
 }
-#counter-app .feature-desc .feature-name {
+.feature-desc__name {
   margin-bottom: 0;
 }
-#counter-app .feature-desc .feature-text {
+.feature-desc__text {
   margin-top: 30px;
   line-height: 2em;
 }
-#curve {
+.curve {
   z-index: 1;
   height: 460px;
   width: 460px;
@@ -36,7 +36,7 @@
   top: 220px;
   left: 100px;
 }
-#curve .curve-icon-wrapper {
+.curve .curve-icon-wrapper {
   cursor: pointer;
   border-radius: 50%;
   border: 5px solid transparent;
@@ -47,7 +47,7 @@
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
-#curve .curve-icon-wrapper .curve-icon {
+.curve .curve-icon-wrapper .curve-icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -56,12 +56,12 @@
   margin: auto;
 }
 @media screen and (min-width: 1200px) {
-  #curve .curve-icon-wrapper:nth-child(1) {
+  .curve .curve-icon-wrapper:nth-child(1) {
     top: -8px;
     left: 290px;
   }
-  #curve .curve-icon-wrapper:nth-child(1):hover,
-  #curve .curve-icon-wrapper:nth-child(1).active-el {
+  .curve .curve-icon-wrapper:nth-child(1):hover,
+  .curve .curve-icon-wrapper:nth-child(1).active-el {
     box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.15);
     width: 88px !important;
     height: 88px !important;
@@ -70,12 +70,12 @@
     top: -25px;
     left: 270px;
   }
-  #curve .curve-icon-wrapper:nth-child(2) {
+  .curve .curve-icon-wrapper:nth-child(2) {
     top: 75px;
     left: 392px;
   }
-  #curve .curve-icon-wrapper:nth-child(2):hover,
-  #curve .curve-icon-wrapper:nth-child(2).active-el {
+  .curve .curve-icon-wrapper:nth-child(2):hover,
+  .curve .curve-icon-wrapper:nth-child(2).active-el {
     box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.15);
     width: 88px !important;
     height: 88px !important;
@@ -84,12 +84,12 @@
     top: 60px;
     left: 375px;
   }
-  #curve .curve-icon-wrapper:nth-child(3) {
+  .curve .curve-icon-wrapper:nth-child(3) {
     top: 200px;
     left: 430px;
   }
-  #curve .curve-icon-wrapper:nth-child(3):hover,
-  #curve .curve-icon-wrapper:nth-child(3).active-el {
+  .curve .curve-icon-wrapper:nth-child(3):hover,
+  .curve .curve-icon-wrapper:nth-child(3).active-el {
     box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.15);
     width: 88px !important;
     height: 88px !important;
@@ -98,12 +98,12 @@
     top: 183.5px;
     left: 413.5px;
   }
-  #curve .curve-icon-wrapper:nth-child(4) {
+  .curve .curve-icon-wrapper:nth-child(4) {
     bottom: 75px;
     left: 392px;
   }
-  #curve .curve-icon-wrapper:nth-child(4):hover,
-  #curve .curve-icon-wrapper:nth-child(4).active-el {
+  .curve .curve-icon-wrapper:nth-child(4):hover,
+  .curve .curve-icon-wrapper:nth-child(4).active-el {
     box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.15);
     width: 88px !important;
     height: 88px !important;
@@ -112,12 +112,12 @@
     bottom: 60px;
     left: 375px;
   }
-  #curve .curve-icon-wrapper:nth-child(5) {
+  .curve .curve-icon-wrapper:nth-child(5) {
     bottom: -8px;
     left: 290px;
   }
-  #curve .curve-icon-wrapper:nth-child(5):hover,
-  #curve .curve-icon-wrapper:nth-child(5).active-el {
+  .curve .curve-icon-wrapper:nth-child(5):hover,
+  .curve .curve-icon-wrapper:nth-child(5).active-el {
     box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.15);
     width: 88px !important;
     height: 88px !important;
@@ -128,107 +128,107 @@
   }
 }
 @media screen and (max-width: 1199px) {
-  #counter-app-phone {
+  .counter-app__phone-img {
     margin-top: 120px;
     height: 200px;
   }
-  #curve {
+  .curve {
     height: 2px;
     width: 500px;
     left: auto;
     right: 50px;
     top: 300px;
   }
-  #curve .curve-icon-wrapper:nth-child(1),
-  #curve .curve-icon-wrapper:nth-child(2),
-  #curve .curve-icon-wrapper:nth-child(3),
-  #curve .curve-icon-wrapper:nth-child(4),
-  #curve .curve-icon-wrapper:nth-child(5) {
+  .curve .curve-icon-wrapper:nth-child(1),
+  .curve .curve-icon-wrapper:nth-child(2),
+  .curve .curve-icon-wrapper:nth-child(3),
+  .curve .curve-icon-wrapper:nth-child(4),
+  .curve .curve-icon-wrapper:nth-child(5) {
     top: -30px;
   }
-  #curve .curve-icon-wrapper:nth-child(1).active-el,
-  #curve .curve-icon-wrapper:nth-child(2).active-el,
-  #curve .curve-icon-wrapper:nth-child(3).active-el,
-  #curve .curve-icon-wrapper:nth-child(4).active-el,
-  #curve .curve-icon-wrapper:nth-child(5).active-el {
+  .curve .curve-icon-wrapper:nth-child(1).active-el,
+  .curve .curve-icon-wrapper:nth-child(2).active-el,
+  .curve .curve-icon-wrapper:nth-child(3).active-el,
+  .curve .curve-icon-wrapper:nth-child(4).active-el,
+  .curve .curve-icon-wrapper:nth-child(5).active-el {
     top: -46.5px;
   }
-  #curve .curve-icon-wrapper:nth-child(1) {
+  .curve .curve-icon-wrapper:nth-child(1) {
     left: 60px;
   }
-  #curve .curve-icon-wrapper:nth-child(1).active-el {
+  .curve .curve-icon-wrapper:nth-child(1).active-el {
     left: 43.5px;
   }
-  #curve .curve-icon-wrapper:nth-child(2) {
+  .curve .curve-icon-wrapper:nth-child(2) {
     left: 140px;
   }
-  #curve .curve-icon-wrapper:nth-child(2).active-el {
+  .curve .curve-icon-wrapper:nth-child(2).active-el {
     left: 126.5px;
   }
-  #curve .curve-icon-wrapper:nth-child(3) {
+  .curve .curve-icon-wrapper:nth-child(3) {
     left: 220px;
   }
-  #curve .curve-icon-wrapper:nth-child(3).active-el {
+  .curve .curve-icon-wrapper:nth-child(3).active-el {
     left: 203.5px;
   }
-  #curve .curve-icon-wrapper:nth-child(4) {
+  .curve .curve-icon-wrapper:nth-child(4) {
     right: 140px;
   }
-  #curve .curve-icon-wrapper:nth-child(4).active-el {
+  .curve .curve-icon-wrapper:nth-child(4).active-el {
     right: 123.5px;
   }
-  #curve .curve-icon-wrapper:nth-child(5) {
+  .curve .curve-icon-wrapper:nth-child(5) {
     right: 60px;
   }
-  #curve .curve-icon-wrapper:nth-child(5).active-el {
+  .curve .curve-icon-wrapper:nth-child(5).active-el {
     right: 43.5px;
   }
 }
 @media screen and (max-width: 992px) {
-  #counter-app {
+  .counter-app {
     height: auto;
     padding: 200px 0;
   }
-  #counter-app #curve {
+  .counter-app .curve {
     top: 0;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
   }
-  #counter-app .feature-desc {
+  .counter-app .feature-desc {
     margin-top: 100px;
     text-align: center;
   }
 }
 @media screen and (max-width: 615px) {
-  #counter-app {
+  .counter-app {
     height: auto;
     padding: 0;
     text-align: center;
     padding: 100px 0;
   }
-  #counter-app .feature-desc {
+  .counter-app .feature-desc {
     margin: 0;
   }
-  #counter-app #curve {
+  .counter-app .curve {
     display: none;
   }
 }
-footer {
+.footer {
   height: 440px;
   background-color: #2ecc71;
   text-align: center;
   color: white;
 }
-footer h2 {
+.footer__header {
   margin-top: 115px;
   margin-bottom: 35px;
 }
-footer p {
+.footer__text {
   margin: 0;
 }
-footer .get-app {
+.footer__btn {
   margin-top: 60px;
   display: inline-block;
   height: 42px;
@@ -241,7 +241,7 @@ footer .get-app {
   color: #2ecc71;
   background-color: white;
 }
-footer .footer-tomato {
+.footer-imgs__tomato {
   position: absolute;
   background-image: url("../images/tomato.png");
   width: 201px;
@@ -254,7 +254,7 @@ footer .footer-tomato {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-footer .footer-paprika {
+.footer-imgs__paprika {
   position: absolute;
   background-image: url("../images/Paprika-geel.png");
   width: 153px;
@@ -267,7 +267,7 @@ footer .footer-paprika {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-footer .footer-strawberry {
+.footer-imgs__strawberry {
   position: absolute;
   background-image: url("../images/strawberries-transparent-1147x1280.png");
   width: 111px;
@@ -278,7 +278,7 @@ footer .footer-strawberry {
   bottom: 0px;
   left: 300px;
 }
-footer .footer-banana {
+.footer-imgs__banana {
   position: absolute;
   background-image: url("../images/banana-dreams-02.png");
   width: 230px;
@@ -291,7 +291,7 @@ footer .footer-banana {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-footer .footer-apple {
+.footer-imgs__apple {
   position: absolute;
   background-image: url("../images/apple1.png");
   width: 200px;
@@ -303,71 +303,36 @@ footer .footer-apple {
   bottom: 0;
 }
 @media screen and (max-width: 768px) {
-  footer {
+  .footer {
     height: auto;
     padding-bottom: 20px;
   }
-  footer h2 {
+  .footer__header {
     margin-top: 50px;
   }
 }
-header {
+.header {
   height: 900px;
   color: white;
   background-color: #2ecc71;
   font-family: Roboto, sans-serif;
   font-weight: 300;
 }
-header .site-nav {
-  font-size: 1.125em;
-  padding-top: 20px;
-}
-header .site-nav #logo {
-  display: inline-block;
-  margin-top: 17px;
-}
-header .site-nav #nav-menu-list {
-  float: right;
-  list-style: none;
-}
-header .site-nav #nav-menu-list .nav-menu-element {
-  display: inline-block;
-}
-header .site-nav #nav-menu-list .nav-menu-element a {
-  display: block;
-  margin-right: 50px;
-  border-bottom: 2px solid trasparent;
-}
-header .site-nav #nav-menu-list .nav-menu-element a:not(.get-app):hover {
-  border-bottom: 2px solid white;
-}
-header .site-nav #nav-menu-list .nav-menu-element .get-app {
-  display: inline-block;
-  height: 42px;
-  width: 140px;
-  text-align: center;
-  line-height: 40px;
-  font-weight: 700;
-  vertical-align: middle;
-  border-radius: 20px;
-  color: #2ecc71;
-  background-color: white;
-}
-header .site-header {
+.header-body {
   text-align: left;
   padding-top: 200px;
 }
-header .site-header #header-btns {
-  margin-top: 60px;
-}
-header .site-header #header-btns #google-play-btn {
-  margin-left: 30px;
-}
-header .site-header h1 {
+.header-body__big-text {
   margin-top: 60px;
   margin-bottom: 25px;
 }
-header .site-header #header-phone {
+.header-body__btns {
+  margin-top: 60px;
+}
+.header-body__btns #google-play-btn {
+  margin-left: 30px;
+}
+.header-body__phone-img {
   position: absolute;
   background-image: url("../images/header_phone.png");
   width: 404px;
@@ -379,7 +344,42 @@ header .site-header #header-phone {
   right: 20px;
   z-index: 9999;
 }
-.banana-header {
+.site-nav {
+  font-size: 1.125em;
+  padding-top: 20px;
+}
+.site-nav__logo {
+  display: inline-block;
+  margin-top: 17px;
+}
+.nav-menu {
+  float: right;
+  list-style: none;
+}
+.nav-menu__el {
+  display: inline-block;
+}
+.nav-menu__link {
+  display: block;
+  margin-right: 50px;
+  border-bottom: 2px solid trasparent;
+}
+.nav-menu__link:not(.nav-menu__link--get-app):hover {
+  border-bottom: 2px solid white;
+}
+.nav-menu__link--get-app {
+  display: inline-block;
+  height: 42px;
+  width: 140px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+  vertical-align: middle;
+  border-radius: 20px;
+  color: #2ecc71;
+  background-color: white;
+}
+.header-imgs__banana {
   position: absolute;
   background-image: url("../images/banana-dreams-02.png");
   width: 234px;
@@ -392,7 +392,7 @@ header .site-header #header-phone {
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
-.tomato-header {
+.header-imgs__tomato {
   position: absolute;
   background-image: url("../images/tamato.png");
   width: 250px;
@@ -406,7 +406,7 @@ header .site-header #header-phone {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.apple-header {
+.header-imgs__apple {
   position: absolute;
   background-image: url("../images/apple1.png");
   width: 176px;
@@ -419,7 +419,7 @@ header .site-header #header-phone {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.strawberry1-header {
+.header-imgs__strawberry1 {
   position: absolute;
   background-image: url("../images/strawberries-transparent-1147x1280.png");
   width: 121px;
@@ -433,7 +433,7 @@ header .site-header #header-phone {
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
 }
-.strawberry2-header {
+.header-imgs__strawberry2 {
   top: 800px;
   left: 500px;
   z-index: 4;
@@ -446,7 +446,7 @@ header .site-header #header-phone {
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 1200px) {
-  header .site-header #header-phone {
+  .header-body__phone-img {
     position: absolute;
     background-image: url("../images/header_phone.png");
     width: 300px;
@@ -457,15 +457,15 @@ header .site-header #header-phone {
   }
 }
 @media screen and (max-width: 992px) {
-  header {
+  .header {
     height: auto;
     padding-bottom: 50px;
   }
-  header .site-nav #logo {
+  .site-nav__logo {
     float: left;
     margin-left: 10px;
   }
-  header .site-nav #menu-trigger {
+  .site-nav__menu-trigger {
     cursor: pointer;
     font-size: 40px;
     line-height: 1;
@@ -474,10 +474,10 @@ header .site-header #header-phone {
     margin-right: 20px;
     margin-top: 10px;
   }
-  header .site-nav #menu-trigger:hover {
-    color: gray;
+  .site-nav__menu-trigger:hover {
+    color: #b4b4b4;
   }
-  header .site-nav #nav-menu-list {
+  .nav-menu {
     display: none;
     background-color: #25a25a;
     top: 70px;
@@ -486,47 +486,40 @@ header .site-header #header-phone {
     padding: 5px;
     text-align: center;
   }
-  header .site-nav #nav-menu-list .nav-menu-element {
+  .nav-menu__el {
     width: 100%;
     margin-top: 10px;
   }
-  header .site-nav #nav-menu-list .nav-menu-element:last-of-type {
+  .nav-menu__el:last-of-type {
     border-bottom: none;
   }
-  header .site-nav #nav-menu-list .nav-menu-element a {
+  .nav-menu__link {
     display: block;
     width: 100px;
     margin: 0 auto 10px auto !important;
     border-bottom: 2px solid transparent;
   }
-  header .site-nav #nav-menu-list .nav-menu-element a:not(.get-app) {
+  .nav-menu__link:not(.nav-menu__link--get-app) {
     padding: 3px;
   }
-  header .site-nav #nav-menu-list .nav-menu-element a:not(.get-app):hover,
-  header .site-nav #nav-menu-list .nav-menu-element a:not(.get-app):focus {
+  .nav-menu__link:not(.nav-menu__link--get-app):hover,
+  .nav-menu__link:not(.nav-menu__link--get-app):focus {
     border-color: white;
   }
-  header .site-header {
+  .header-body {
     padding-left: 10px;
     padding-top: 120px;
   }
 }
-#manage-time {
+.manage-time {
   background-color: white;
   height: 700px;
 }
-#manage-time .el-desc {
-  display: none;
-  margin-top: 250px;
-}
-#manage-time .el-desc:first-of-type {
-  display: block;
-}
-#manage-time #time-carousel .carousel-el-wrapper {
+.carousel-wrapper {
   height: 360px;
   margin-top: 170px;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el {
+.carousel-el {
   cursor: pointer;
   margin-top: 30px;
   margin-right: auto;
@@ -539,35 +532,35 @@ header .site-header #header-phone {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el:first-of-type {
+.carousel-el:first-of-type {
   margin-top: 0;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el:hover,
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el.active-el {
+.carousel-el:hover,
+.carousel-el.active-el {
   width: 520px;
   height: 130px;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el:hover .carousel-el-info h4,
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el.active-el .carousel-el-info h4 {
+.carousel-el:hover .el-info__header,
+.carousel-el.active-el .el-info__header {
   font-size: 1.225em;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el:hover .carousel-el-info .el-info-desc,
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el.active-el .carousel-el-info .el-info-desc {
+.carousel-el:hover .el-info__desc,
+.carousel-el.active-el .el-info__desc {
   font-size: .963em;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el:hover .carousel-el-info .el-info-values,
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el.active-el .carousel-el-info .el-info-values {
+.carousel-el:hover .el-info__values,
+.carousel-el.active-el .el-info__values {
   font-size: .963em;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el:hover .carousel-el-time time,
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el.active-el .carousel-el-time time {
+.carousel-el:hover__time .time,
+.carousel-el.active-el__time .time {
   font-size: 1.875em;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el:hover .carousel-el-time .pm,
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el.active-el .carousel-el-time .pm {
+.carousel-el:hover__time .pm,
+.carousel-el.active-el__time .pm {
   font-size: 1.225em;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el img {
+.carousel-el__img {
   width: 95px;
   height: 56px;
   margin-right: 20px;
@@ -575,31 +568,31 @@ header .site-header #header-phone {
   margin-top: auto;
   margin-bottom: auto;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-info {
+.carousel-el .el-info {
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
   text-align: left;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-info h4 {
+.carousel-el .el-info__header {
   margin: 0;
   font-size: 0.938em;
   -webkit-transition: font-size 0.2s;
   transition: font-size 0.2s;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-info .el-info-desc {
+.carousel-el .el-info__desc {
   font-size: .770em;
   font-weight: 300;
   -webkit-transition: font-size 0.2s;
   transition: font-size 0.2s;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-info .el-info-values {
+.carousel-el .el-info__values {
   font-size: .770em;
   font-weight: 300;
   -webkit-transition: font-size 0.2s;
   transition: font-size 0.2s;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-info .el-info-values .dot {
+.carousel-el .el-info__values .dot {
   display: inline-block;
   margin: auto 10px;
   border-radius: 50%;
@@ -607,52 +600,56 @@ header .site-header #header-phone {
   width: 4px;
   height: 4px;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-time {
+.carousel-el__time {
   text-align: right;
   margin: auto;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-time time {
+.carousel-el__time .time {
   font-size: 1.540em;
   font-weight: 700;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-time .pm {
+.carousel-el__time .pm {
   color: #b4b4b4;
   font-size: 0.980em;
   font-weight: 700;
   -webkit-transition: font-size 0.2s;
   transition: font-size 0.2s;
 }
-#manage-time #time-carousel .carousel-el-wrapper .time-carousel-el .carousel-el-time .gray-text {
-  color: #b4b4b4;
+.carousel-el-desc {
+  display: none;
+  margin-top: 250px;
+}
+.carousel-el-desc:first-of-type {
+  display: block;
 }
 @media screen and (max-width: 1200px) {
-  #manage-time .carousel-el-wrapper .time-carousel-el {
+  .carousel-el {
     width: 300px !important;
     padding-left: 30px;
   }
-  #manage-time .carousel-el-wrapper .time-carousel-el.active-el {
+  .carousel-el.active-el {
     width: 400px !important;
   }
 }
 @media screen and (max-width: 768px) {
-  #manage-time {
+  .manage-time {
     height: auto;
     padding: 100px 0;
   }
-  #manage-time .el-desc {
+  .carousel-el-desc {
     margin-top: 0;
   }
 }
-#plan-diet {
+.plan-diet {
   text-align: center;
   height: 900px;
   background-color: #f9f9f9;
 }
-#plan-diet h2 {
+.plan-diet__header {
   margin-top: 110px;
   margin-bottom: 30px;
 }
-#plan-diet #left-phone {
+.plan-diet__left-phone {
   position: absolute;
   background-image: url("../images/diet_left_phone.png");
   width: 253px;
@@ -664,7 +661,7 @@ header .site-header #header-phone {
   bottom: 0;
   z-index: 9;
 }
-#plan-diet #middle-phone {
+.plan-diet__middle-phone {
   position: absolute;
   background-image: url("../images/diet_middle_phone.png");
   width: 337px;
@@ -679,7 +676,7 @@ header .site-header #header-phone {
   bottom: 0;
   z-index: 10;
 }
-#plan-diet #right-phone {
+.plan-diet__right-phone {
   right: 190px;
   bottom: 0;
   z-index: 9;
@@ -691,7 +688,7 @@ header .site-header #header-phone {
   background-position: top center;
   background-repeat: no-repeat;
 }
-#plan-diet .diet-paprika {
+.diet-imgs__paprika {
   position: absolute;
   background-image: url("../images/Paprika-geel.png");
   width: 188px;
@@ -704,7 +701,7 @@ header .site-header #header-phone {
   left: -50px;
   top: 300px;
 }
-#plan-diet .diet-strawberry {
+.diet-imgs__strawberry {
   position: absolute;
   background-image: url("../images/strawberries-transparent-1147x1280.png");
   width: 138px;
@@ -717,7 +714,7 @@ header .site-header #header-phone {
   top: 370px;
   right: 10px;
 }
-#plan-diet .diet-apple {
+.diet-imgs__apple {
   position: absolute;
   background-image: url("../images/apple1.png");
   width: 224px;
@@ -730,7 +727,7 @@ header .site-header #header-phone {
   left: 30px;
   top: 600px;
 }
-#plan-diet .diet-banana {
+.diet-imgs__banana {
   position: absolute;
   background-image: url("../images/banana-dreams-02.png");
   width: 227px;
@@ -744,16 +741,16 @@ header .site-header #header-phone {
   right: 40px;
 }
 @media screen and (max-width: 768px) {
-  #plan-diet {
+  .plan-diet {
     height: auto;
   }
-  #plan-diet h2 {
+  .plan-diet__header {
     margin-top: 80px;
   }
-  #plan-diet p {
+  .plan-diet__text {
     margin-bottom: 400px;
   }
-  #plan-diet #middle-phone {
+  .plan-diet__middle-phone {
     position: absolute;
     background-image: url("../images/diet_middle_phone.png");
     width: 200px;
@@ -816,6 +813,9 @@ h2 {
 .green-text {
   color: #2ecc71;
 }
+.gray-text {
+  color: #b4b4b4;
+}
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -858,29 +858,29 @@ h2 {
   height: 26px;
 }
 .not-clear,
-footer .footer-tomato,
-footer .footer-paprika,
-footer .footer-strawberry,
-footer .footer-banana,
-footer .footer-apple,
-.banana-header,
-.tomato-header,
-.apple-header,
-.strawberry1-header,
-.strawberry2-header,
-#plan-diet .diet-paprika,
-#plan-diet .diet-strawberry,
-#plan-diet .diet-apple,
-#plan-diet .diet-banana {
+.footer-imgs__tomato,
+.footer-imgs__paprika,
+.footer-imgs__strawberry,
+.footer-imgs__banana,
+.footer-imgs__apple,
+.header-imgs__banana,
+.header-imgs__tomato,
+.header-imgs__apple,
+.header-imgs__strawberry1,
+.header-imgs__strawberry2,
+.diet-imgs__paprika,
+.diet-imgs__strawberry,
+.diet-imgs__apple,
+.diet-imgs__banana {
   -webkit-filter: blur(4px);
           filter: blur(4px);
 }
 .active-feature,
-#curve .curve-icon-wrapper:nth-child(1).active-el,
-#curve .curve-icon-wrapper:nth-child(2).active-el,
-#curve .curve-icon-wrapper:nth-child(3).active-el,
-#curve .curve-icon-wrapper:nth-child(4).active-el,
-#curve .curve-icon-wrapper:nth-child(5).active-el {
+.curve .curve-icon-wrapper:nth-child(1).active-el,
+.curve .curve-icon-wrapper:nth-child(2).active-el,
+.curve .curve-icon-wrapper:nth-child(3).active-el,
+.curve .curve-icon-wrapper:nth-child(4).active-el,
+.curve .curve-icon-wrapper:nth-child(5).active-el {
   box-shadow: 0px 0px 60px 0px rgba(15, 65, 36, 0.15);
   width: 88px !important;
   height: 88px !important;

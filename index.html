@@ -13,52 +13,55 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="container">
             <div class="row">
                 <nav class="site-nav">
-                    <a href="#" id="logo">
+                    <a class="site-nav__logo" href="#">
                         <img src="src/assets/images/logo.png" alt="fit app">
                     </a>
-                    <span class="hidden-lg hidden-md" id="menu-trigger">&#9776;</span>
-                    <ul id="nav-menu-list">
-                        <li class="nav-menu-element"><a href="#">About</a></li>
-                        <li class="nav-menu-element"><a href="#">Features</a></li>
-                        <li class="nav-menu-element"><a href="#">Reviews</a></li>
-                        <li class="nav-menu-element"><a href="#">Blog</a></li>
-                        <li class="nav-menu-element"><a href="#">Support</a></li>
-                        <li class="nav-menu-element"><a href="#" class="get-app">Get App</a></li>
+                    <span class="site-nav__menu-trigger hidden-lg hidden-md">&#9776;</span>
+                    <ul class="nav-menu">
+                        <li class="nav-menu__el"><a class="nav-menu__link" href="#">About</a></li>
+                        <li class="nav-menu__el"><a class="nav-menu__link" href="#">Features</a></li>
+                        <li class="nav-menu__el"><a class="nav-menu__link" href="#">Reviews</a></li>
+                        <li class="nav-menu__el"><a class="nav-menu__link" href="#">Blog</a></li>
+                        <li class="nav-menu__el"><a class="nav-menu__link" href="#">Support</a></li>
+                        <li class="nav-menu__el"><a class="nav-menu__link nav-menu__link--get-app" href="#">Get App</a></li>
                     </ul>
                 </nav>
-                <div class="site-header">
-                    <img src="src/assets/images/App-Icon.png" alt="app icon">
-                    <h1>Helps you eat <b>better.</b></h1>
+                <div class="header-body">
+                    <img class="header-body__app-icon" src="src/assets/images/App-Icon.png" alt="app icon">
+                    <h1 class="header-body__big-text">Helps you eat <b>better.</b></h1>
                     <p>FitApp is a free calorie counting and diet app PSD template which
                         <br> includes high quality 9 screens. This template can be very helpful if you're
                         <br> planning to build food tracking application.</p>
-                    <div id="header-btns">
-                        <a id="app-store-btn" href="#"><img src="src/assets/images/app_store_badge.png" alt="app store"></a>
-                        <a id="google-play-btn" href="#"><img src="src/assets/images/google_play_badge.png" alt="google play"></a>
+                    <div class="header-body__btns">
+                        <a class="btn--app-store" href="#"><img src="src/assets/images/app_store_badge.png" alt="app store"></a>
+                        <a class="btn--google-play" href="#"><img src="src/assets/images/google_play_badge.png" alt="google play"></a>
                     </div>
-                    <div class="hidden-sm hidden-xs" id="header-phone"></div>
+                    <div class="header-body__phone-img hidden-sm hidden-xs"></div>
                 </div>
             </div>
-            <div class="hidden-sm hidden-xs hidden-md">
-                <div class="banana-header"></div>
-                <div class="tomato-header"></div>
-                <div class="apple-header"></div>
-                <div class="strawberry1-header"></div>
-                <div class="strawberry2-header"></div>
+            <!--row-->
+            <div class="header-imgs hidden-sm hidden-xs hidden-md">
+                <div class="header-imgs__banana"></div>
+                <div class="header-imgs__tomato"></div>
+                <div class="header-imgs__apple"></div>
+                <div class="header-imgs__strawberry1"></div>
+                <div class="header-imgs__strawberry2"></div>
             </div>
         </div>
+        <!--container-->
     </header>
     <!-- header -->
-    <section id="counter-app">
+
+    <section class="counter-app">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-6">
-                    <img class="hidden-sm hidden-xs" id="counter-app-phone" src="src/assets/images/main_phone.png" alt="counter app for phone">
-                    <div id="curve">
+                    <img class="counter-app__phone-img hidden-sm hidden-xs" src="src/assets/images/main_phone.png" alt="counter app for phone">
+                    <div class="curve">
                         <div class="curve-icon-wrapper">
                             <div class="curve-icon sprite-sound"></div>
                         </div>
@@ -78,71 +81,75 @@
                 </div>
                 <div class="col-lg-offset-6 col-lg-6 col-md-offset-5 col-md-6 col-sm-offset-1 col-sm-10 col-xs-12">
                     <div class="feature-desc animated fadeIn">
-                        <h2 class="feature-name">Best calorie <span class="green-text">counter app!</span></h2>
-                        <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        <h2 class="feature-desc__name">Best calorie <span class="green-text">counter app!</span></h2>
+                        <p class="feature-desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                     <div class="feature-desc animated fadeIn">
-                        <h2 class="feature-name">Best calorie <span class="green-text">counter app!</span></h2>
-                        <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        <h2 class="feature-desc__name">Best calorie <span class="green-text">counter app!</span></h2>
+                        <p class="feature-desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                     <div class="feature-desc animated fadeIn">
-                        <h2 class="feature-name">Best calorie <span class="green-text">counter app!</span></h2>
-                        <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        <h2 class="feature-desc__name">Best calorie <span class="green-text">counter app!</span></h2>
+                        <p class="feature-desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                     <div class="feature-desc animated fadeIn">
-                        <h2 class="feature-name">Best calorie <span class="green-text">counter app!</span></h2>
-                        <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        <h2 class="feature-desc__name">Best calorie <span class="green-text">counter app!</span></h2>
+                        <p class="feature-desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                     <div class="feature-desc animated fadeIn">
-                        <h2 class="feature-name">Best calorie <span class="green-text">counter app!</span></h2>
-                        <p class="feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        <h2 class="feature-desc__name">Best calorie <span class="green-text">counter app!</span></h2>
+                        <p class="feature-desc__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                 </div>
             </div>
+            <!--row-->
         </div>
+        <!--container-->
     </section>
     <!-- counter app section -->
-    <section id="plan-diet">
+
+    <section class="plan-diet">
         <div class="container">
             <div class="row">
-                <h2>A simple way to <span class="green-text">plan your diet!</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <h2 class="plan-diet__header">A simple way to <span class="green-text">plan your diet!</span></h2>
+                <p class="plan-diet__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     <br> dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <div class="hidden-sm hidden-xs" id="left-phone"></div>
-                <div id="middle-phone"></div>
-                <div class="hidden-sm hidden-xs" id="right-phone"></div>
+                <div class="plan-diet__left-phone hidden-sm hidden-xs"></div>
+                <div class="plan-diet__middle-phone"></div>
+                <div class="plan-diet__right-phone hidden-sm hidden-xs"></div>
             </div>
-            <div class="hidden-sm hidden-xs">
-                <div class="diet-paprika"></div>
-                <div class="diet-strawberry"></div>
-                <div class="diet-apple"></div>
-                <div class="diet-banana"></div>
+            <div class="diet-imgs hidden-sm hidden-xs">
+                <div class="diet-imgs__paprika"></div>
+                <div class="diet-imgs__strawberry"></div>
+                <div class="diet-imgs__apple"></div>
+                <div class="diet-imgs__banana"></div>
             </div>
         </div>
     </section>
     <!-- plan your diet section -->
-    <section id="manage-time">
+
+    <section class="manage-time">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-xs-10">
-                    <div class="el-desc animated fadeInLeft">
+                    <div class="carousel-el-desc animated fadeInLeft">
                         <h2>Manage your <span class="green-text">fruits time</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             <br class="hidden-sm hidden-xs"> sed do eiusmod tempor incididunt ut labore et dolore
                             <br class="hidden-sm hidden-xs"> magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
-                    <div class="el-desc animated fadeInLeft">
+                    <div class="carousel-el-desc animated fadeInLeft">
                         <h2>Manage your <span class="green-text">meal time</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             <br class="hidden-sm hidden-xs"> sed do eiusmod tempor incididunt ut labore et dolore
                             <br class="hidden-sm hidden-xs"> magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
-                    <div class="el-desc animated fadeInLeft">
+                    <div class="carousel-el-desc animated fadeInLeft">
                         <h2>Manage your <span class="green-text">health time</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                             <br class="hidden-sm hidden-xs"> sed do eiusmod tempor incididunt ut labore et dolore
@@ -150,81 +157,87 @@
                     </div>
                 </div>
                 <div class="col-md-6 hidden-sm hidden-xs">
-                    <div id="time-carousel">
-                        <div class="carousel-el-wrapper">
-                            <div class="time-carousel-el flex">
-                                <img class="hidden-md" src="src/assets/images/Large_Red_Apples_PNG_Clipart.png" alt="fruit time">
-                                <div class="carousel-el-info">
-                                    <h4 class="green-text">Apple</h4>
-                                    <div class="el-info-desc">Lorem ipsum dolor sit.</div>
-                                    <div class="el-info-values green-text flex">
+                    <div class="carousel">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-el flex">
+                                <img class="carousel-el__img hidden-md" src="src/assets/images/Large_Red_Apples_PNG_Clipart.png" alt="fruit time">
+                                <div class="carousel-el__info el-info">
+                                    <h4 class="el-info__header green-text">Apple</h4>
+                                    <div class="el-info__desc">Lorem ipsum dolor sit.</div>
+                                    <div class="el-info__values green-text flex">
                                         <div>35 g</div>
                                         <div class="dot"></div>
                                         <div>189 kcal</div>
                                     </div>
                                 </div>
-                                <div class="carousel-el-time">
-                                    <time class="gray-text">01:00</time>
+                                <div class="carousel-el__time">
+                                    <time class="time gray-text">01:00</time>
                                     <div class="pm">PM</div>
                                 </div>
                             </div>
-                            <div class="time-carousel-el flex">
-                                <img class="hidden-md" src="src/assets/images/sandwich.png" alt="meal time">
-                                <div class="carousel-el-info">
-                                    <h4 class="green-text">Sandwich</h4>
-                                    <div class="el-info-desc">Lorem ipsum dolor sit.</div>
-                                    <div class="el-info-values green-text flex">
+                            <div class="carousel-el flex">
+                                <img class="carousel-el__img hidden-md" src="src/assets/images/sandwich.png" alt="meal time">
+                                <div class="carousel-el__info el-info">
+                                    <h4 class="el-info__header green-text">Sandwich</h4>
+                                    <div class="el-info__desc">Lorem ipsum dolor sit.</div>
+                                    <div class="el-info__values green-text flex">
                                         <div>35 g</div>
                                         <div class="dot"></div>
                                         <div>189 kcal</div>
                                     </div>
                                 </div>
-                                <div class="carousel-el-time">
-                                    <time class="green-text">03:00</time>
+                                <div class="carousel-el__time">
+                                    <time class="time green-text">03:00</time>
                                     <div class="pm">PM</div>
                                 </div>
                             </div>
-                            <div class="time-carousel-el flex">
-                                <img class="hidden-md" src="src/assets/images/mcdonalds-Crispy-Chicken-Salad-no-bacon.png" alt="vegetables time">
-                                <div class="carousel-el-info">
-                                    <h4 class="green-text">Salad with chicken</h4>
-                                    <div class="el-info-desc">Lorem ipsum dolor sit.</div>
-                                    <div class="el-info-values green-text flex">
+                            <div class="carousel-el flex">
+                                <img class="carousel-el__img hidden-md" src="src/assets/images/mcdonalds-Crispy-Chicken-Salad-no-bacon.png" alt="vegetables time">
+                                <div class="carousel-el__info el-info">
+                                    <h4 class="el-info__header green-text">Salad with chicken</h4>
+                                    <div class="el-info__desc">Lorem ipsum dolor sit.</div>
+                                    <div class="el-info__values green-text flex">
                                         <div>220 g</div>
                                         <div class="dot"></div>
                                         <div>189 kcal</div>
                                     </div>
                                 </div>
-                                <div class="carousel-el-time">
-                                    <time class="green-text">05:30</time>
+                                <div class="carousel-el__time">
+                                    <time class="time green-text">05:30</time>
                                     <div class="pm">PM</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--carousel-->
             </div>
+            <!--row-->
         </div>
+        <!--container-->
     </section>
     <!-- manage your time -->
-    <footer>
+
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <h2>Download, customize & <b>enjoy!</b></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <h2 class="footer__header">Download, customize & <b>enjoy!</b></h2>
+                <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     <br class="hidden-sm hidden-xs"> dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <a class="get-app" href="#">Get App</a>
+                <a class="footer__btn" href="#">Get App</a>
             </div>
-            <div class="hidden-md hidden-sm hidden-xs">
-                <div class="footer-tomato"></div>
-                <div class="footer-paprika"></div>
-                <div class="footer-strawberry"></div>
-                <div class="footer-banana"></div>
-                <div class="footer-apple"></div>
+            <div class="footer-imgs hidden-md hidden-sm hidden-xs">
+                <div class="footer-imgs__tomato"></div>
+                <div class="footer-imgs__paprika"></div>
+                <div class="footer-imgs__strawberry"></div>
+                <div class="footer-imgs__banana"></div>
+                <div class="footer-imgs__apple"></div>
             </div>
         </div>
+        <!--container-->
     </footer>
     <!-- footer -->
+
     <script src="src/assets/libs/jquery/jquery.min.js"></script>
     <script src="src/js/main.js"></script>
     <script src="src/js/carousel.js"></script>

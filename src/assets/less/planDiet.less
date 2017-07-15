@@ -1,18 +1,18 @@
-#plan-diet {
+.plan-diet {
     text-align: center;
     height: 900px;
     background-color: #f9f9f9;
-    h2 {
+    &__header {
         margin-top: 110px;
         margin-bottom: 30px;
     }
-    #left-phone {
+    &__left-phone {
         .bg-image('diet_left_phone.png', 253px, 447px, top center);
         left: 190px;
         bottom: 0;
         z-index: 9;
     }
-    #middle-phone {
+    &__middle-phone {
         .bg-image('diet_middle_phone.png', 337px, 545px, top center);
         margin-right: auto;
         margin-left: auto;
@@ -21,35 +21,37 @@
         bottom: 0;
         z-index: 10;
     }
-    #right-phone {
+    &__right-phone {
         right: 190px;
         bottom: 0;
         z-index: 9;
         .bg-image('diet_right_phone.png', 253px, 451px, top center);
     }
-    .diet-paprika {
+}
+
+.diet-imgs {
+    &__paprika {
         .bg-image('Paprika-geel.png', 188px, 193px);
         &:extend(.not-clear);
         transform: rotate(-45deg);
         left: -50px;
-        top: 300px;        
+        top: 300px;
     }
-    .diet-strawberry {
+    &__strawberry {
         .bg-image('strawberries-transparent-1147x1280.png', 138px, 145px);
         &:extend(.not-clear);
         transform: rotate(80deg);
-        top: 370px;        
+        top: 370px;
         right: 10px;
     }
-    .diet-apple {
+    &__apple {
         .bg-image('apple1.png', 224px, 305px);
         &:extend(.not-clear);
         transform: rotate(30deg);
         left: 30px;
         top: 600px;
     }
-
-    .diet-banana {
+    &__banana {
         .bg-image('banana-dreams-02.png', 227px, 150px);
         &:extend(.not-clear);
         transform: rotate(70deg);
@@ -59,11 +61,15 @@
 }
 
 @media screen and (max-width: 768px) {
-    #plan-diet {
+    .plan-diet {
         height: auto;
-        h2 { margin-top: 80px; }
-        p { margin-bottom: 400px; }
-        #middle-phone {
+        &__header {
+            margin-top: 80px;
+        }
+        &__text {
+            margin-bottom: 400px;
+        }
+        &__middle-phone {
             .bg-image('diet_middle_phone.png', 200px, 350px, top center);
         }
     }

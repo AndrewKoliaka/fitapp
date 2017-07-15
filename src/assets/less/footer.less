@@ -1,47 +1,50 @@
-footer {
+.footer {
     height: 440px;
     background-color: @accent;
     text-align: center;
-    color: white;
-    h2 {
+    color: @secondary;
+    &__header {
         margin-top: 115px;
         margin-bottom: 35px;
     }
-    p {
+    &__text {
         margin: 0;
     }
-    .get-app {
+    &__btn {
         margin-top: 60px;
         .get-app-btn(245px);
     }
-    .footer-tomato {
+}
+
+.footer-imgs {
+    &__tomato {
         .bg-image('tomato.png', 201px, 291px);
         &:extend(.not-clear);
         left: -50px;
         top: 170px;
         transform: rotate(-90deg);
     }
-    .footer-paprika {
+    &__paprika {
         .bg-image('Paprika-geel.png', 153px, 168px);
         &:extend(.not-clear);
         top: 50px;
         left: 80px;
         transform: rotate(45deg);
     }
-    .footer-strawberry {
+    &__strawberry {
         .bg-image('strawberries-transparent-1147x1280.png', 111px, 70px, top left);
         &:extend(.not-clear);
         bottom: 0px;
         left: 300px;
     }
-    .footer-banana {
+    &__banana {
         .bg-image('banana-dreams-02.png', 230px, 188px);
         &:extend(.not-clear);
         right: 0;
         top: 50px;
         transform: rotate(45deg);
     }
-    .footer-apple {
+    &__apple {
         .bg-image('apple1.png', 200px, 150px, top left);
         &:extend(.not-clear);
         right: 0;
@@ -50,10 +53,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    footer {
+    .footer {
         height: auto;
         padding-bottom: 20px;
-        h2 {
+        &__header {
             margin-top: 50px;
         }
     }
